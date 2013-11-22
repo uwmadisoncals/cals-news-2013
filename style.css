@@ -4667,7 +4667,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', e
 .collegeFeature {
 	width: 100%;
 	margin: 0 auto;
-	height: 500px;
+	height: 530px;
 	position: relative;
 	z-index:2;
 	overflow: hidden;
@@ -4914,7 +4914,7 @@ background-size: 100% auto;
 
 .headerPhotoBg {
 	
-	height: 500px;
+	height: 530px;
 	position: relative;
 	
 }
@@ -4963,7 +4963,7 @@ background-size: 100% auto;
 	overflow: hidden;
 	float: left;
 	width: auto;
-	height: 500px;
+	height: 530px;
 	
 }
 
