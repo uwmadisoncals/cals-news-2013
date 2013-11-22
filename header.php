@@ -351,7 +351,7 @@ $url = $thumb['0']; echo $url;
   		
   			<div class="featureCaption">
   				<div class="centered">
-  				<h2><?php the_title(); ?></h2>
+  				<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   				
 	  				<div class="featuresubtitle">
 	  				<?php the_time('l, F jS, Y') ?>

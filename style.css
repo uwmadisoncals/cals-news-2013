@@ -3619,6 +3619,18 @@ a code {
 	color: #deb846;
 }
 
+#page .featureCaption h2 a:link, #page .featureCaption h2 a:visited {
+	color: #fff;
+	z-index:2;
+	display:block;
+}
+
+#page .featureCaption h2 a:hover {
+	color: #ececec;
+	z-index:2;
+	display:block;
+}
+
 .featureCaption .featuresubtitle {
 	color: #deb846;
 }
