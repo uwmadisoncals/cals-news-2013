@@ -611,7 +611,59 @@ function twentyeleven_body_classes( $classes ) {
 add_filter( 'body_class', 'twentyeleven_body_classes' );
 
 
+function cals_get_featured_video($args, &$echo=true){
+	global $post;
+	//get content and find first valid video address 
+	require_once ( ABSPATH . WPINC . '/class-oembed.php' );
+	 $o = new WP_oEmbed;
+	 //print_r($o);
+	 $content = get_the_content();
+	 foreach($o->providers as $key => $value){
+		 
+		//$key = substr_replace($key, "\/#", strrpos($key, '/')); 
+		//echo $key;
 
+	if(preg_match($key, $content, $matches)==1){
+			if($echo==true){
+				echo wp_oembed_get($matches[0], $args);$matches[0];
+				
+			} else {
+				return wp_oembed_get($matches[0], $args);$matches[0];
+			}
+			break;
+		}
+		
+	 }
+
+}
+
+// Linkify youtube URLs which are not already links.
+function linkifyYouTubeURLs($text) {
+    $text = preg_replace('~
+        # Match non-linked youtube URL in the wild. (Rev:20130823)
+        https?://         # Required scheme. Either http or https.
+        (?:[0-9A-Z-]+\.)? # Optional subdomain.
+        (?:               # Group host alternatives.
+          youtu\.be/      # Either youtu.be,
+        | youtube\.com    # or youtube.com followed by
+          \S*             # Allow anything up to VIDEO_ID,
+          [^\w\-\s]       # but char before ID is non-ID char.
+        )                 # End host alternatives.
+        ([\w\-]{11})      # $1: VIDEO_ID is exactly 11 chars.
+        (?=[^\w\-]|$)     # Assert next char is non-ID or EOS.
+        (?!               # Assert URL is not pre-linked.
+          [?=&+%\w.-]*    # Allow URL (query) remainder.
+          (?:             # Group pre-linked alternatives.
+            [\'"][^<>]*>  # Either inside a start tag,
+          | </a>          # or inside <a> element text contents.
+          )               # End recognized pre-linked alts.
+        )                 # End negative lookahead assertion.
+        [?=&+%\w.-]*        # Consume any URL (query) remainder.
+        ~ix', 
+        '$1',
+        $text);
+    return $text;
+}
 
 
 function catch_that_image() {
@@ -623,9 +675,20 @@ function catch_that_image() {
   ob_end_clean();
   $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $imgmatches);
   $output = preg_match('/<iframe.*src=\"(.*)\".*><\/iframe>/isU', $post->post_content, $vidmatches);
+  
+ 
+  
   $first_img = $imgmatches[1][0];
   $first_vid = $vidmatches[0];
   
+  var_dump($output);
+  
+  $url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
+  parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+  $videoimg = "http://img.youtube.com/vi/".$my_array_of_vars['v']."/0.jpg";
+      
+  // Output: C4kxS1ksqtw
+  //http://img.youtube.com/vi/<insert-youtube-video-id-here>/0.jpg
   /*if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $post->post_content, $vidmatch)) {
   	$video = "yes";
     $first_img = $vidmatch[1][0];
@@ -634,7 +697,7 @@ function catch_that_image() {
   if(empty($first_img) && empty($first_vid)) {
     //placeholder
     //$first_img = "<div class='noImageSpacer2'></div>";
-    
+    return "nothing";
   }  else {
 	//$first_vid = "<img src='".$first_vid;
 	//return $first_vid;

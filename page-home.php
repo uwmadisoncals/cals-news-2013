@@ -33,10 +33,10 @@ get_header(); ?>
 				
 					<div class="span-50 box">
 							
-							<h2>News</h2>
+							<h2>Highlights</h2>
 							
-							<?php switch_to_blog(20); ?>
-<?php query_posts("posts_per_page=1&category_name=featured-articles"); ?>
+							<?php //switch_to_blog(19); ?>
+<?php query_posts("posts_per_page=1&cat=11"); ?>
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post();  ?>
 
@@ -66,8 +66,8 @@ get_header(); ?>
 
   <?php endwhile; ?>
 <?php endif; ?>
-<?php restore_current_blog(); ?>							
-							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More News</a>
+<?php //restore_current_blog(); ?>							
+							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Highlights</a>
 						
 						
 						<div class="windows8">
@@ -98,42 +98,52 @@ get_header(); ?>
 					</div>
 					
 					<div class="span-50 box">
-							 <?php 
-								//hold original loop
-								$tmp_post = $post;
-								
-								//get spotlight posts
-								$posts = get_posts('category_name=spotlight&numberposts=1');
-								foreach($posts as $post){
-									setup_postdata($post);?>
-									
-								<?php	if ( has_post_thumbnail() ) {
+							
+                                               
+                                                <h2>Videos</h2>
+                                            <?php //switch_to_blog(19); ?>
+<?php query_posts("category_name=featured-videos&posts_per_page=1"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+
+  <?php	if ( has_post_thumbnail() ) {
 		    				
 		    				//the_post_thumbnail();
 		    				echo get_the_post_thumbnail($page->ID, 'large');
  
 		    				} else {
- 
-							 //echo '<img src="';
-							 echo catch_that_image();
-							// echo '" alt="" />';
+		    				
+		    				
+		    				$url = get_the_content();
+		    				
+		    				//$url = linkifyYouTubeURLs($content);
+		    				//echo $url;
+							//$url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
+  parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+  $videoimg = "http://img.youtube.com/vi/".$my_array_of_vars['v']."/0.jpg";
+							 echo '<img src="';
+							 echo $videoimg;
+							 //echo catch_that_image();
+							echo '" alt="" />';
 
 						} ?>
-                                               
-                                                <h2>Spotlight</h2>
-                                             <div class="boxContent">
-											<h3 class="spotlight_title"><a href="<?php the_permalink();?>"><?php  the_title();?></a></h3>
-											<p><?php echo $post->post_excerpt;?></p>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
                                              </div>
-                                             <div class="topShade"></div>
-							<div class="bottomShade"></div>
-								<!-- .spotlight_slide -->  
-                        <?php	 
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+    
+
+    
+ 
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php //restore_current_blog(); ?>	
 							
-								} 
-								//restore original loop
-								$post = $tmp_post;
-							?>
+							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Videos</a>
 						<div class="windows8">
 							<div class="wBall" id="wBall_1">
 							<div class="wInnerBall">

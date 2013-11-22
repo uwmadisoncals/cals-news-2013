@@ -216,7 +216,7 @@ $current_colorscheme = $options['link_color'];
   				
   						<?php
 				// Has the text been hidden?
-				if ( 'blank' == get_header_textcolor() ) :
+				//if ( 'blank' == get_header_textcolor() ) :
 			?>
 				<div class="globalSearch">
 				<?php get_search_form(); ?>
@@ -261,10 +261,10 @@ $pages = get_pages();
 				</div>
 				</div>
 			<?php
-				else :
+				//else :
 			?>
-				<?php get_search_form(); ?>
-			<?php endif; ?>
+				<?php //get_search_form(); ?>
+			<?php //endif; ?>
 				</div>
 				
 				
@@ -294,17 +294,20 @@ $pages = get_pages();
 
 <div class="collegeFeature">
 <ul class="slides">
-  <?php while ( have_posts() ) : the_post(); ?>
+  <?php	$args = array( 'posts_per_page' => 3, 'offset'=> 0, 'category_name' => 'featured-articles' );
+	$loopcount = 0;
+
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+
+  
 
 					<?php //get_template_part( 'content', 'page' ); ?>
 
 					<?php //comments_template( '', true ); ?>
 					
-					<?php $args = array( 'post_type' => 'headerslides', 'posts_per_page' => 1 );
-					$loop = new WP_Query( $args );
-					$loopcount = 0;
-					while ( $loop->have_posts() ) : $loop->the_post(); 
-					$loopcount = $loopcount + 1;
+			
+					<?php $loopcount = $loopcount + 1;
 					$slideclass = "slideImage".$loopcount;
 					$slideblurclass = "slideBlur".$loopcount;
 					?>
@@ -323,9 +326,9 @@ $url = $thumb['0']; echo $url;
 				 
 						    				} else {
 				 
-											 //echo '<img src="';
-											 //echo catch_that_image();
-											// echo '" alt="" />';
+											 // echo '<img src="';
+											 // echo catch_that_image();
+											 // echo '" alt="" />';
 				
 										}
 					    				
@@ -351,17 +354,15 @@ $url = $thumb['0']; echo $url;
   				<h2><?php the_title(); ?></h2>
   				
 	  				<div class="featuresubtitle">
-	  				<?php the_content_rss(); ?>
+	  				<?php the_time('l, F jS, Y') ?>
 	  				</div>
   				</div>
   			</div>
   			
   		</li>
   		
-  	
-					<?php endwhile; ?>
-
-				<?php endwhile; // end of the loop. ?>
+  	<?php endforeach; 
+wp_reset_postdata();?>
 				
 				</ul>
   	
