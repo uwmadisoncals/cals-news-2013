@@ -4421,8 +4421,9 @@ transform: rotate(900deg);
 }
 
 .boxContent h3 {
-	font-weight: 300;
-	
+	font-weight: 500;
+	-webkit-font-smoothing: antialiased;
+	line-height: 24px;
 	font-size: 20px;
 	color: #fff;
 }
@@ -4431,7 +4432,7 @@ transform: rotate(900deg);
 	color: #fff;
 }
 
-.boxContent p {
+.boxContent p, .dateheading {
 	color: #deb846;
 	line-height: 1.4em;
 	font-size: 11px;
@@ -4444,13 +4445,13 @@ transform: rotate(900deg);
 	right: 0px;
 	height: 80%;
 	z-index:1;
-	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.7))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.7) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#b3000000',GradientType=0 ); /* IE6-9 */
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.8))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
 }
 
 .box .topShade {
@@ -5246,18 +5247,21 @@ display: block;
 
 .newsItem {
   width: 304px;
-  /*height: 225px;*/
-  margin: 5px;
-  float: left;
-  overflow: hidden;
-  position: relative;
-  background: #ccc;
-  color: #343434;
-  border: 1px solid #b7b7b7;
-  box-sizing: border-box;
-  -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
-  -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+/*height: 225px;*/
+margin: 5px;
+float: left;
+overflow: hidden;
+position: relative;
+background: #ccc;
+color: #343434;
+border: 1px solid #b7b7b7;
+box-sizing: border-box;
+-moz-box-shadow: 0px 1px 5px #a9a9a9;
+-webkit-box-shadow: 0px 1px 5px #a9a9a9;
+box-shadow: 0px 1px 5px #a9a9a9;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
 	
 }
 
@@ -5288,7 +5292,7 @@ display: block;
 	display: block;
 	width: 304px;
 	/*height: 225px;*/
-	text-align: center;
+	text-align: left;
 	position: relative;
 	
 	border-bottom: none;
@@ -5310,8 +5314,10 @@ display: block;
 
 
 .newsItem a .text .excerpt, .newsItem .previousa .text .excerpt {
-	display: none;
+	/*display: none;*/
 	position: relative;
+	padding: 18px;
+	padding-bottom: 0px;
 	}
 
 .newsItem a .text .excerpt p, .newsItem .previousa .text .excerpt p {
@@ -5321,6 +5327,8 @@ display: block;
 	
 }
 
+
+
 .Explorer .newsItem .previousa .text .excerpt {
 	border-bottom: 1px dashed #ccc;
 }
@@ -5328,6 +5336,35 @@ display: block;
 .Explorer .newsItem.twitter .previousa .text .excerpt {
 	border-bottom: none;
 }
+
+.newsItem .previousa .text.imagePresent {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index:4;
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.95) 81%, rgba(0,0,0,0.95) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(81%,rgba(0,0,0,0.95)), color-stop(100%,rgba(0,0,0,0.95))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 81%,rgba(0,0,0,0.95) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 81%,rgba(0,0,0,0.95) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 81%,rgba(0,0,0,0.95) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.95) 81%,rgba(0,0,0,0.95) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#f2000000',GradientType=0 ); /* IE6-9 */
+
+-moz-box-shadow:    none;
+  -webkit-box-shadow: none;
+  box-shadow:         none;
+  padding-top: 50px;
+}
+
+.newsItem .previousa .text.imagePresent h3 {
+	color: #fff;
+}
+
+.newsItem .previousa .text.imagePresent .excerpt, .newsItem .previousa.reverse .text.imagePresent .excerpt, .newsItem .previousa.expand .text.imagePresent .excerpt {
+	display: none;
+}
+
 
 .newsItem a .text .excerpt .fold1, .newsItem a .text .excerpt .fold2, .newsItem .previousa .text .excerpt .fold1, .newsItem .previousa .text .excerpt .fold2 {
 	padding-left: 20px;
@@ -5342,8 +5379,8 @@ display: block;
 }
 
 .Safari .newsItem a .text, .Chrome .newsItem a .text, .Firefox .newsItem a .text, .Chrome .newsItem a .text, .Safari .newsItem .previousa .text, .Chrome .newsItem .previousa .text, .Firefox .newsItem .previousa .text, .Chrome .newsItem .previousa .text, .newsItem .previousa .text {
-	margin-left: -24px;
-	margin-right: -24px;	
+	/*margin-left: -24px;
+	margin-right: -24px;	*/
 }
 
 /*.Safari .newsItem.noImage a .text, .Chrome .newsItem.noImage a .text, .Firefox .newsItem.noImage a .text, .Chrome .newsItem.noImage a .text, .Safari .newsItem.noImage .previousa .text, .Chrome .newsItem.noImage .previousa .text, .Firefox .newsItem.noImage .previousa .text, .Chrome .newsItem.noImage .previousa .text, .newsItem.noImage .previousa .text {
@@ -5362,7 +5399,7 @@ display: block;
 
 .newsItem a.expand .text .excerpt, .newsItem .previousa.expand .text .excerpt {
 	display: block;
-	-webkit-animation-name: foldopen;
+	/*-webkit-animation-name: foldopen;
  	-webkit-animation-duration: .4s;
  	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease-in-out;	
@@ -5376,13 +5413,14 @@ display: block;
 	-moz-animation-timing-function: ease-in-out;	
 	-moz-box-sizing: border-box;
 	-moz-animation-fill-mode: forwards;
-	-moz-transform-style: preserve-3d;
-	
+	-moz-transform-style: preserve-3d;*/
+	padding: 18px;
+	padding-bottom: 0px;
 }
 
 .newsItem a.reverse .text .excerpt, .newsItem .previousa.reverse .text .excerpt {
 	display: block;
-	-webkit-animation-name: foldclose;
+	/*-webkit-animation-name: foldclose;
  	-webkit-animation-duration: .4s;
  	-webkit-animation-iteration-count: 1;
  	-webkit-transform: rotateX(0deg);
@@ -5400,8 +5438,11 @@ display: block;
 	-moz-animation-fill-mode: forwards;
 	-moz-transform-style: preserve-3d;
 	
-	height: 0px;
+	height: 0px;*/
+	padding: 18px;
+	padding-bottom: 0px;
 }
+
 
 
 
@@ -5510,11 +5551,14 @@ border-bottom: 1px dashed #e9e9e9;
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-	z-index:40;
+	z-index: 40;
 	width: 302px;
 	text-indent: -1000000px;
 	font-size: 0px;
 	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
 	
 }
 
@@ -5607,10 +5651,10 @@ border-bottom: 1px dashed #e9e9e9;
 }
 
 .newsItem a .titleheading, .newsItem .previousa .titleheading {
-	border-bottom: 1px dashed #ccc;
-	padding-left: 18px;
-	padding-right: 18px;
-	padding-bottom: 14px;
+	
+	/*padding-left: 18px;
+	padding-right: 18px;*/
+	
 }
 
 /*.newsItem.noImage a .titleheading, .newsItem.noImage .previousa .titleheading {
@@ -5619,13 +5663,13 @@ border-bottom: 1px dashed #e9e9e9;
 }*/
 
 .newsItem a .dateheading, .newsItem .previousa .dateheading {
-	text-transform: uppercase;
+	/*text-transform: uppercase;
 	letter-spacing: 1px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: bold;
 	color: #7f7f7f;
 	margin-top: 8px;
-	font-size: 11px;
+	font-size: 11px;*/
 }
 
 .newsItem .hiddendate, .newsItem .hiddengroup {
@@ -5633,11 +5677,12 @@ border-bottom: 1px dashed #e9e9e9;
 }
 
 .newsItem a:link h3, .newsItem a:visited h3, .newsItem .previousa h3  {
-	font-size: 16px;
-	color: #393939;
-	font-family: 'Merriweather', Georgia, serif;
-	font-weight: 700;
-	margin-top: 8px;
+	font-size: 28px;
+color: #902813;
+font-family: 'Open Sans', sans-serif;
+-webkit-font-smoothing: antialiased;
+font-weight: 300;
+margin-top: 8px;
 	
 }
 
@@ -5671,11 +5716,11 @@ border-bottom: 1px dashed #e9e9e9;
 	max-height: 100%;
 	padding-left: 24px;
 	padding-right: 24px;
-	position: absolute;
+	/*position: absolute;
 	left: 0px;
 	bottom: 0px;
 	right: 0px;
-	z-index:4;
+	z-index:4;*/
 	background: #fff;
 }
 
@@ -5965,6 +6010,7 @@ border-bottom: 1px dashed #e9e9e9;
 }
 
 .newsItem .text .glyph {
+	display: none;
 	width: 66px;
 	height: 0px;
 	margin: 0 auto;
@@ -5981,9 +6027,10 @@ border-bottom: 1px dashed #e9e9e9;
 }
 
 .newsItem .text h3 {
-	font-weight: 500;
-	margin-bottom: 12px;
-	line-height: 24px;
+	font-weight: 300;
+margin-bottom: 4px;
+line-height: 32px;
+-webkit-font-smoothing: antialiased;
 }
 
 
@@ -7464,7 +7511,7 @@ border-radius: 3px;
 }
 
 .noImageSpacer2 {
-	height: 100px;
+	/*height: 100px;*/
 }
 
 

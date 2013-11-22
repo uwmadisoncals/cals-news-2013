@@ -17,6 +17,22 @@ var countFeatures = 0;
 	  setInterval(function() {
 		  $("body").toggleClass("relative");
 	  },500);
+	  
+	  
+	  $('.newsItem .additionalContent').each(function(index) {
+		//console.log($(this).next().html());
+		var i = $(this).children().hasClass("noImageSpacer2");
+		
+		if(i) {
+				//console.log("no image");
+			} else {
+				$(this).next().addClass("imagePresent");
+			}
+		
+		
+			
+			
+		});
 	   
 	   $(".box a").click(function() {
 		  $(this).closest(".box").find("img").addClass("blurAnim");
@@ -562,21 +578,21 @@ var countFeatures = 0;
 		
 		
 		
-		var height1 = parseInt($(this).find('.additionalContent').height());
+		/*var height1 = parseInt($(this).find('.additionalContent').height());
 		var height2 = parseInt($(this).find('.text').height());
 		var height3 = parseInt($(this).find('.additionalContent img').attr('height'));
 		var width1 = parseInt($(this).find('.additionalContent img').attr('width'));
-		var width2 = parseInt($(this).find('.additionalContent').width());
+		var width2 = parseInt($(this).find('.additionalContent').width());*/
 		
 		
 		if(!isMobile) {
-		var updateheight = height1 + (height2*1.3);
+		//var updateheight = height1 + (height2*1.3);
 		} else {
-			var updateheight = height1 + (height2*1.1);
+			//var updateheight = height1 + (height2*1.1);
 		}
 			
 		
-		$(this).not('.customize, .noImage').find('.previousa').css("height",updateheight);
+		/*$(this).not('.customize, .noImage').find('.previousa').css("height",updateheight);*/
 		
 		if(BrowserDetect.browser != "Explorer") {
 		
@@ -588,7 +604,7 @@ var countFeatures = 0;
 		
 		//console.log(h);
 		
-		if(!isMobile) {
+		/*if(!isMobile) {
 		
 		$(this).find('.excerpt').css("height",h);
 		$(this).find('.excerpt').html("");
@@ -610,7 +626,7 @@ var countFeatures = 0;
 
 		//$(this).find('.excerpt').attr("data-height",h+'px');
 		
-		}
+		}*/
 		}
 		
 		

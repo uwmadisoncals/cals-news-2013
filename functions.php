@@ -666,6 +666,8 @@ function linkifyYouTubeURLs($text) {
 }
 
 
+
+
 function catch_that_image() {
   global $post, $posts;
   $first_img = '';
@@ -696,8 +698,8 @@ function catch_that_image() {
 
   if(empty($first_img) && empty($first_vid)) {
     //placeholder
-    //$first_img = "<div class='noImageSpacer2'></div>";
-    return "nothing";
+    $first_img = "<div class='noImageSpacer2'></div>";
+    //return "nothing";
   }  else {
 	//$first_vid = "<img src='".$first_vid;
 	//return $first_vid;

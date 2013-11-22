@@ -161,11 +161,9 @@ if ( 'content' != $current_layout ) : ?>
     
 		
 			<div id="content" role="main">
-			<div id="container" style="opacity: 0;" class="super-list variable-sizes clearfix">
-
-
-
-			<div class="newsItem customize">
+			
+			
+			<div class="newsItem customize" style="display: none;">
 			<span class="number">1</span>
 			<div class="hiddendate">-9999999999</div>
     	<div class="categories">
@@ -174,16 +172,16 @@ if ( 'content' != $current_layout ) : ?>
 		  			
 
 	    	<?php
-/*$categories = get_categories();
+$categories = get_categories();
 foreach ($categories as $cat) {
 
 if($cat->cat_name != 'Uncategorized') {
 echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat->cat_name.'</a></li>';
 }
 
-}*/
+}
 ?>
-					<li><a href="#" data-cat="Agriculture" class="selected agriculture categor"><span></span>Agriculture</a><a href="http://news.cals.wisc.edu/category/agriculture/" style="display: none;" class="more">See More</a></li>
+					<!--<li><a href="#" data-cat="Agriculture" class="selected agriculture categor"><span></span>Agriculture</a><a href="http://news.cals.wisc.edu/category/agriculture/" style="display: none;" class="more">See More</a></li>
 					<li><a href="#" data-cat="Announcements" class="selected announcements categor"><span></span>Announcements</a><a href="http://news.cals.wisc.edu/category/highlights/" style="display: none;" class="more">See More</a></li>
 			    	<li><a href="#" data-cat="Energy" class="selected energy categor"><span></span>Energy</a><a href="http://news.cals.wisc.edu/category/energy/" style="display: none;" class="more">See More</a></li>
 			    	<li><a href="#" data-cat="Environment" class="selected environment categor"><span></span>Environment</a><a href="http://news.cals.wisc.edu/category/environment/" style="display: none;" class="more">See More</a></li>
@@ -191,7 +189,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 			    	<li><a href="#" data-cat="Food" class="selected food categor"><span></span>Food</a><a href="http://ecals.cals.wisc.edu/category/food-2/" style="display: none;" class="more">See More</a></li>
 			    	<li><a href="#" data-cat="Health" class="selected health categor"><span></span>Health</a><a href="http://news.cals.wisc.edu/category/health/" style="display: none;" class="more">See More</a></li>
 			    	<li><a href="#" data-cat="People" class="selected people categor"><span></span>People</a><a href="http://ecals.cals.wisc.edu/category/people/" style="display: none;" class="more">See More</a></li>
-			    	<li><a href="#" data-cat="social" class="selected social categor"><span></span>Social</a><a href="http://twitter.com/uwmadisoncals" style="display: none;" class="more">See More</a></li>
+			    	<li><a href="#" data-cat="social" class="selected social categor"><span></span>Social</a><a href="http://twitter.com/uwmadisoncals" style="display: none;" class="more">See More</a></li>-->
 			    	
 		  		</ul>
 	  		</div>
@@ -211,7 +209,354 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
   		</div>
     </div>
-   		<?php	if ( is_home() ) { query_posts( 'showposts=1' ); } ?>
+			
+			
+			
+			<!-- CALS News Content Box -->
+				<div class="row clearfix">
+				
+					<div class="span-50 box">
+							
+							<h2>Highlights</h2>
+							
+							<?php //switch_to_blog(19); ?>
+<?php query_posts("posts_per_page=1&cat=11"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+
+  <?php	if ( has_post_thumbnail() ) {
+		    				
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
+ 
+		    				} else {
+							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
+							 //echo '<img src="';
+							 echo catch_that_news_image();
+							// echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+    
+
+    
+ 
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php //restore_current_blog(); ?>							
+							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Highlights</a>
+						
+						
+						<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>
+						
+					</div>
+					
+					<div class="span-50 box">
+							
+                                               
+                                                <h2>Videos</h2>
+                                            <?php //switch_to_blog(19); ?>
+<?php query_posts("category_name=featured-videos&posts_per_page=1"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+
+  <?php	if ( has_post_thumbnail() ) {
+		    				
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
+ 
+		    				} else {
+		    				
+		    				
+		    				$url = get_the_content();
+		    				
+		    				//$url = linkifyYouTubeURLs($content);
+		    				//echo $url;
+							//$url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
+  parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+  $videoimg = "http://img.youtube.com/vi/".$my_array_of_vars['v']."/0.jpg";
+							 echo '<img src="';
+							 echo $videoimg;
+							 //echo catch_that_image();
+							echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+    
+
+    
+ 
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php //restore_current_blog(); ?>	
+							
+							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Videos</a>
+						<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>	
+					</div>
+					
+				</div>
+				
+				<div class="row clearfix">
+				
+					<div class="span-33 box">
+							<h2>Announcements</h2>
+							
+							<?php switch_to_blog(19); ?>
+<?php query_posts("cat=17&posts_per_page=1"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+
+  <?php	if ( has_post_thumbnail() ) {
+		    				
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
+ 
+		    				} else {
+							
+							 //echo '<img src="';
+							 echo catch_that_announcements_image();
+							// echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+    
+
+    
+ 
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php restore_current_blog(); ?>							
+							<a href="http://ecals.dev.cals.wisc.edu" class="moreButton">More Announcements</a>
+						<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>
+					</div>
+					
+					<div class="span-33 box eventsBox">
+							<h2>Events</h2>
+							<img src="<?php echo get_template_directory_uri(); ?>/images/aghall1.jpg" alt=" ">
+							<div class="boxContent">
+										<?php // Get RSS Feed(s)
+  include_once(ABSPATH . WPINC . '/rss.php');
+  $rss = fetch_rss('http://www.today.wisc.edu/events/feed/30.rss2');
+  $maxitems = 2;
+  $items = array_slice($rss->items, 0, $maxitems);
+?>
+
+
+  <?php if (empty($items)): ?>
+   <h3 class="spotlight_title">No Upcoming Events</h3>
+  <?php else:
+      foreach ( $items as $item ):
+        ?>
+        <h3 class="spotlight_title">
+          <a href='<?php echo $item['link']; ?>' title='<?php echo $item['title']; ?>'>
+            
+            <?php $tempTitle = $item['title']; $newTitle = substr($tempTitle, 20, 60); ?>
+            <?php echo $newTitle."..."; ?>
+          </a>
+        </h3>
+        <p><?php $tempDate = $item['title']; $newDate = substr($tempTitle, 0, 18); ?>
+            <?php echo $newDate; ?></p>
+        <?php
+      endforeach;
+    endif;
+  ?>
+
+				
+			
+								
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+								<a href="http://www.today.wisc.edu/events/feed/30" class="moreButton">More Events</a>
+								
+								<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>
+
+					</div>
+					
+					<div class="span-33 box">
+							<h2>Faces</h2>
+							
+							<?php switch_to_blog(20); ?>
+<?php query_posts("posts_per_page=1&cat=17"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+
+  <?php	if ( has_post_thumbnail() ) {
+		    				
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
+ 
+		    				} else {
+							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
+							 //echo '<img src="';
+							 echo catch_that_news_image();
+							// echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>			
+    
+    
+
+    
+ 
+
+  <?php endwhile; ?>
+<?php endif; ?>
+<?php restore_current_blog(); ?>
+<a href="http://news.dev.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More Faces</a>
+<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>
+					</div>
+					
+				</div>
+			
+			<div id="container" style="opacity: 0;" class="super-list variable-sizes clearfix">
+			
+
+
+			
+   		<?php	if ( is_home() ) { query_posts( 'showposts=14' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -393,16 +738,16 @@ echo $category[0]->slug; ?></div>
 				
 							<?php 
 								//get news from eCALS
-								cals_fetch_feed('http://ecals.cals.wisc.edu/?cat=-356,-384,-385,-363,-358,-366,-355&feed=rss2', 4, 1, -1);
+								//cals_fetch_feed('http://ecals.cals.wisc.edu/?cat=-356,-384,-385,-363,-358,-366,-355&feed=rss2', 4, 1, -1);
 								 
 								//get news from CALS News
-								cals_fetch_feed('http://news.cals.wisc.edu/?feed=rss2&cat=-20,-21,-66,-67,0', 4, 1, -1); 
+								//cals_fetch_feed('http://news.cals.wisc.edu/?feed=rss2&cat=-20,-21,-66,-67,0', 4, 1, -1); 
 								
 								
 								
 								
 								
-								cals_get_last_tweet();
+								//cals_get_last_tweet();
 							?>
 							<?php get_sidebar( 'homepage' ); ?>
 				<?php //twentyeleven_content_nav( 'nav-below' ); ?>
