@@ -522,6 +522,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
   <?php endwhile; ?>
 <?php endif; ?>
 <?php restore_current_blog(); ?>
+<?php wp_reset_query(); ?>
 <a href="http://news.dev.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More Podcals</a>
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
@@ -556,7 +557,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
 
 			
-   		<?php	if ( is_home() ) { query_posts( 'showposts=14' ); } ?>
+   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=4' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 

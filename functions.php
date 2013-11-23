@@ -683,7 +683,7 @@ function catch_that_image() {
   $first_img = $imgmatches[1][0];
   $first_vid = $vidmatches[0];
   
-  var_dump($output);
+  //var_dump($output);
   
   $url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
   parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
@@ -699,7 +699,7 @@ function catch_that_image() {
   if(empty($first_img) && empty($first_vid)) {
     //placeholder
     $first_img = "<div class='noImageSpacer2'></div>";
-    //return "nothing";
+    return $first_img;
   }  else {
 	//$first_vid = "<img src='".$first_vid;
 	//return $first_vid;
