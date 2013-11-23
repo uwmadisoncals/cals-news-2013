@@ -281,7 +281,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 						
 					</div>
 					
-					<div class="span-50 box">
+					<div class="span-50 box videos">
 							
                                                
                                                 <h2>Videos</h2>
@@ -488,7 +488,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 					</div>
 					
 					<div class="span-33 box">
-							<h2>Faces</h2>
+							<h2>Podcals</h2>
 							
 							<?php switch_to_blog(20); ?>
 <?php query_posts("posts_per_page=1&cat=17"); ?>
@@ -522,7 +522,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
   <?php endwhile; ?>
 <?php endif; ?>
 <?php restore_current_blog(); ?>
-<a href="http://news.dev.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More Faces</a>
+<a href="http://news.dev.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More Podcals</a>
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
 							<div class="wInnerBall">

@@ -3793,7 +3793,7 @@ h1.logo {
   margin-right: -10px;
   padding: 5px;
   padding-top: 0px;
-  margin-top: -10px;
+  margin-top: -8px;
   margin-bottom: 20px;
 }
 
@@ -3920,6 +3920,10 @@ min-height: 220px;
 	-moz-transition: all 0.4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
 	transition: all 0.4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
 	
+}
+
+.box.videos img {
+	margin-top: -70px;
 }
 
 
@@ -4689,7 +4693,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99ffffff', e
 	}
 	
 .collegeFeature .slideImage {
-	height: 500px;
+	height: 530px;
 	-ms-filter: blur(8px);
 	-webkit-filter: blur(8px);
 	-moz-filter: blur(8px);
