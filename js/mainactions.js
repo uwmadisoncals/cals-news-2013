@@ -129,9 +129,10 @@ var countFeatures = 0;
 		var halfd = duration /2;
 		var time1,time2;
     	time1 = setInterval(function() {nextSlide();},duration);
+    	var homeCheck = $("body").hasClass("home");
     	
     	 //If only one feature is available, hide auto rotation.
-		 if(countFeatures == 1) {
+		 if(countFeatures == 1 || homeCheck == false) {
 			 $(".timer, .collegeFeature .next, .collegeFeature .previous").hide();
 			 clearInterval(time1);
 		 }

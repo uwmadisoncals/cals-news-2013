@@ -988,6 +988,10 @@ border-radius: 0px;
 	position: relative;
 }
 
+#main {
+	margin-top: -350px;
+}
+
 .home #main {
 	clear: both;
 	padding: 0 0 0;
@@ -1477,7 +1481,7 @@ article.format-status .entry-content {
 /* Singular content styles for Posts and Pages */
 .singular .hentry {
 	border-bottom: none;
-	padding: 4.875em 0 0;
+	padding: 0em 0 0;
 	position: relative;
 }
 .singular.page .hentry {
