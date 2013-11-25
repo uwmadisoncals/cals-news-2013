@@ -3191,6 +3191,23 @@ p.comment-form-comment {
  }
 }
 
+
+@-webkit-keyframes dropin {
+ from {
+  opacity: 0;
+  -webkit-transform: scale(3,3);
+  -webkit-animation-timing-function: cubic-bezier(0.000, 0.325, 0.000, 1.000);
+  
+  
+ }
+ to {
+	-webkit-transform: scale(1,1);
+	-webkit-animation-timing-function: cubic-bezier(0.000, 0.325, 0.000, 1.000);
+	opacity: 1;
+	
+ }
+}
+
 @-webkit-keyframes rotate {
  from {
   -webkit-transform: rotate(0deg);
@@ -3441,6 +3458,21 @@ p.comment-form-comment {
  }
  
  
+}
+
+@-moz-keyframes dropin {
+ from {
+  opacity: 0;
+  -moz-transform: scale(3,3);
+   -moz-animation-timing-function: cubic-bezier(0.000, 0.325, 0.000, 1.000);
+  
+ }
+ to {
+	-moz-transform: scale(1,1);
+	opacity: 1;
+	-moz-animation-timing-function: cubic-bezier(0.000, 0.325, 0.000, 1.000);
+	
+ }
 }
 
 
@@ -3879,6 +3911,8 @@ min-height: 220px;
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	overflow: hidden;
+	
+	
 }
 
 
@@ -4900,6 +4934,132 @@ background-size: 100% auto;
 	z-index:2;
 }*/
 
+.dropin {
+	opacity: 0;
+	-webkit-animation-name: dropin;
+ 	-webkit-animation-duration: 0.3s;
+ 	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;	
+	-webkit-transform: rotateY(0deg);	
+	-webkit-box-sizing: border-box;
+	-webkit-animation-fill-mode: forwards; 
+	
+	
+	-moz-animation-name: dropin;
+ 	-moz-animation-duration: 0.3s;
+ 	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;	
+	-moz-transform: rotateY(0deg);	
+	-moz-box-sizing: border-box;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay:0.1s;
+-webkit-animation-delay:0.1s; /* Safari and Chrome */
+-moz-animation-delay:0.1s;
+
+}
+
+.dropin2 {
+	opacity: 0;
+	-webkit-animation-name: dropin;
+ 	-webkit-animation-duration: 0.4s;
+ 	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;	
+	-webkit-transform: rotateY(0deg);	
+	-webkit-box-sizing: border-box;
+	-webkit-animation-fill-mode: forwards; 
+	
+	
+	-moz-animation-name: dropin;
+ 	-moz-animation-duration: 0.4s;
+ 	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;	
+	-moz-transform: rotateY(0deg);	
+	-moz-box-sizing: border-box;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay:0.1s;
+-webkit-animation-delay:0.1s; /* Safari and Chrome */
+-moz-animation-delay:0.1s;
+
+}
+
+.dropin3 {
+	opacity: 0;
+	-webkit-animation-name: dropin;
+ 	-webkit-animation-duration: 0.6s;
+ 	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;	
+	-webkit-transform: rotateY(0deg);	
+	-webkit-box-sizing: border-box;
+	-webkit-animation-fill-mode: forwards; 
+	
+	
+	-moz-animation-name: dropin;
+ 	-moz-animation-duration: 0.6s;
+ 	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;	
+	-moz-transform: rotateY(0deg);	
+	-moz-box-sizing: border-box;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay:0.2s;
+-webkit-animation-delay:0.2s; /* Safari and Chrome */
+-moz-animation-delay:0.2s;
+
+}
+
+
+.dropin4 {
+	opacity: 0;
+	-webkit-animation-name: dropin;
+ 	-webkit-animation-duration: 0.8s;
+ 	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;	
+	-webkit-transform: rotateY(0deg);	
+	-webkit-box-sizing: border-box;
+	-webkit-animation-fill-mode: forwards; 
+	
+	
+	-moz-animation-name: dropin;
+ 	-moz-animation-duration: 0.8s;
+ 	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;	
+	-moz-transform: rotateY(0deg);	
+	-moz-box-sizing: border-box;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay:0.25s;
+-webkit-animation-delay:0.25s; /* Safari and Chrome */
+-moz-animation-delay:0.25s;
+
+}
+
+.dropin5 {
+	opacity: 0;
+	-webkit-animation-name: dropin;
+ 	-webkit-animation-duration: 1.2s;
+ 	-webkit-animation-iteration-count: 1;
+	-webkit-animation-timing-function: ease-in-out;	
+	-webkit-transform: rotateY(0deg);	
+	-webkit-box-sizing: border-box;
+	-webkit-animation-fill-mode: forwards; 
+	
+	
+	-moz-animation-name: dropin;
+ 	-moz-animation-duration: 1.2s;
+ 	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in-out;	
+	-moz-transform: rotateY(0deg);	
+	-moz-box-sizing: border-box;
+	-moz-animation-fill-mode: forwards; 
+	
+	animation-delay:0.3s;
+-webkit-animation-delay:0.3s; /* Safari and Chrome */
+-moz-animation-delay: 0.3s;
+
+}
+
 
 /*.collegeFeature .shadow {
 	position: absolute;
@@ -5322,7 +5482,7 @@ border-radius: 4px;
 .newsItem a .text .excerpt, .newsItem .previousa .text .excerpt {
 	/*display: none;*/
 	position: relative;
-	padding: 18px;
+	padding: 0px;
 	padding-bottom: 0px;
 	}
 
@@ -5420,7 +5580,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	-moz-box-sizing: border-box;
 	-moz-animation-fill-mode: forwards;
 	-moz-transform-style: preserve-3d;*/
-	padding: 18px;
+	padding: 0px;
 	padding-bottom: 0px;
 }
 
@@ -5445,7 +5605,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 	-moz-transform-style: preserve-3d;
 	
 	height: 0px;*/
-	padding: 18px;
+	padding: 0px;
 	padding-bottom: 0px;
 }
 
@@ -6036,6 +6196,7 @@ margin-top: 8px;
 	font-weight: 300;
 margin-bottom: 4px;
 line-height: 24px;
+margin-top: 0px;
 -webkit-font-smoothing: antialiased;
 }
 
@@ -6450,12 +6611,12 @@ footer .inner .copyright div:first-child {
 
 .loadBar {
 	position: relative;
-	width: 940px;
+	width: 100%;
 	margin: 0 auto;
 	background: rgba(0,0,0,.4);
 	height: 2px;
 	float: left;
-		
+	margin-top: -30px;
 }
 
 .loadBar .progress {

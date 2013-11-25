@@ -504,6 +504,9 @@ var countFeatures = 0;
  	//Redraw tiles UI
  	function reDraw(elem) {
 		
+		//$(".box").addClass("dropin");
+		
+		
 		setTimeout(function() {
 		
 		$("#container").animate({ 
@@ -1278,6 +1281,7 @@ var countFeatures = 0;
 	    var w = $(this);
 
 		var tsrc = $(this).not('.customize').find('img').attr('src');
+		var tsrcObj = $(this).not('.customize').find('img').parent();
 		if(BrowserDetect.browser != "Explorer") {
 		//$(this).find('.excerpt').hide();
 		}
@@ -1306,6 +1310,21 @@ var countFeatures = 0;
 	            }
 	        }).error(function () {
 	            // notify the user that the image could not be loaded
+	            //tsrcObj.html("<div class='noImageSpacer2'></div>");
+	            
+	            //console.log(delaychange.attr("src"));
+	           
+				// console.log(tsrcObj.html());
+	            //tsrc = tsrc.replace(/^https:\/\//i, 'http://');
+	            tsrcObj.html("<div class='noImageSpacer2'></div>");
+	            tsrcObj.next().removeClass('imagePresent');
+	            // console.log(tsrcObj.html());
+	            //console.log(delaychange.attr("src"));
+				
+	           
+	            
+	            $('.loadBar').fadeOut(300);
+	            reDraw();
 	        }).attr('src', tsrc);
         
         

@@ -20,87 +20,13 @@ get_header(); ?>
   <?php if (function_exists( 'muneeb_ssp_slider')) {muneeb_ssp_slider( 109 );} ?>
    </div>
   
- <!-- <div class="collegeFeature">
-  	<ul class="slides">
-  		<li class="flipin">
-  			<img src="<?php bloginfo('template_directory'); ?>/images/homefeature/featurebar_img1.jpg" alt="College Feature">
-  			<div class="featureCaption">
-  				<h2>Learn About <em class="purple">Life</em></h2>
-  				
-  				<a href="students/admissions" >Apply to CALS</a> | <a href="students/undergraduate-programs/areas-of-study/">Explore our majors</a>
-  			</div>
-  			
-  		</li>
-  		<li class="flipin">
-  			<img src="<?php bloginfo('template_directory'); ?>/images/homefeature/featurebar_img2.jpg" alt="College Feature">
-  			<div class="featureCaption">
-  				<h2>Acting <em class="red">Globally</em></h2>
-  				
-  				<a href="global">CALS around the world</a> | <a href="http://ip.cals.wisc.edu/">International Programs</a>
-  			</div>
-  			
-  		</li>
-  		<li class="flipin">
-  			<img src="<?php bloginfo('template_directory'); ?>/images/homefeature/featurebar_img3.jpg" alt="College Feature">
-  			<div class="featureCaption">
-  				<h2>In the lab. In the field. <em class="green sans thin">By your side</em>.</h2>
-  				
-  				<a href="outreach/get-help/find-an-expert/">Find an expert</a> | <a href="outreach/cals-by-your-side/">CALS in your community</a>
-  			</div>
-  			
-  		</li>
-  		<li class="flipin">
-  			<img src="<?php bloginfo('template_directory'); ?>/images/homefeature/featurebar_img4.jpg" alt="College Feature">
-  			<div class="featureCaption">
-  				<h2 class="thin sans">Stay <em class="blue condensed">connected</em></h2>
-  				
-  				<a href="alumni-friends/get-involved/">Get involved</a> | <a href="alumni-friends/make-a-gift/">Give to CALS</a>
-  			</div>
-  			
-  		</li>
-  	</ul>
-  	
-  	<a href="#" class="next">Next</a>
-  	<a href="#" class="previous">Previous</a>
-  	
-  	<div class="timer">
-  		<a href="#">Pause Slide Rotation</a>
-	  	<div class="timerLeft">
-	  	<div class="timer1"></div>
-	  	</div>
-	  	<div class="timerRight">
-	  	<div class="timer2"></div>
-	  	</div>
-	  	
-  	</div>
-  </div>
-  <div class='fluidHeight' style="display: none;">
-			
-			<div class = 'sliderContainer'>
-			
-				<div class = 'iosSlider'>
-				
-					<div class = 'slider'>
-					
-						
-						
-						
-					
-					</div>
-				
-				</div>
-				
-				
-				
-				<div class = 'scrollbarContainer'></div>
-				
-			</div>
-		
-		</div>-->
+ 
   
  
   <div id="main">
-
+<div class="loadBar">
+	<div class="progress"></div>
+</div>
 		<div id="primary">
 			
 			
@@ -145,9 +71,7 @@ if ( 'content' != $current_layout ) : ?>
 			
 			
 		<?php if ( 'content' == $current_layout ) : ?>	
-			<div class="loadBar">
-	<div class="progress"></div>
-</div>
+			
 		<!--<div class="centeredContainerInset topspace">
  
   <h2 class="sectionTitle">Highlights</h2>
@@ -215,7 +139,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 			<!-- CALS News Content Box -->
 				<div class="row clearfix">
 				
-					<div class="span-50 box">
+					<div class="span-50 box dropin">
 							
 							<h2>Highlights</h2>
 							
@@ -281,7 +205,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 						
 					</div>
 					
-					<div class="span-50 box videos">
+					<div class="span-50 box videos dropin2">
 							
                                                
                                                 <h2>Videos</h2>
@@ -358,7 +282,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 				
 				<div class="row clearfix">
 				
-					<div class="span-33 box">
+					<div class="span-33 box dropin3">
 							<h2>Announcements</h2>
 							
 							<?php switch_to_blog(19); ?>
@@ -420,7 +344,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 						<div class="shade"></div>
 					</div>
 					
-					<div class="span-33 box eventsBox">
+					<div class="span-33 box eventsBox dropin4">
 							<h2>Events</h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/aghall1.jpg" alt=" ">
 							<div class="boxContent">
@@ -487,7 +411,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
 					</div>
 					
-					<div class="span-33 box">
+					<div class="span-33 box dropin5">
 							<h2>Podcals</h2>
 							
 							<?php switch_to_blog(20); ?>
@@ -557,7 +481,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
 
 			
-   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=4' ); } ?>
+   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=4&cat=-18,-14,-17,-21,-25,-26,-27,-12,-11' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -612,7 +536,7 @@ echo $category[0]->slug; ?>">
     			
     			</div>
     			<div class="dateheading">
-    			<?php the_date(); ?>
+    			<?php the_time('l, F jS, Y'); ?>
     			</div>
     			<div class="hiddendate"><?php echo "-"; the_time('Ymd') ?></div>
     			<div class="hiddengroup"><?php $category = get_the_category(); 
