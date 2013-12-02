@@ -16,7 +16,7 @@ var countFeatures = 0;
 	   
 	  setInterval(function() {
 		  $("body").toggleClass("relative");
-	  },500);
+	  },1000);
 	  
 	  
 	  $('.newsItem .additionalContent').each(function(index) {
@@ -97,8 +97,10 @@ var countFeatures = 0;
 			   $(this).addClass('active');
 			   if($(this).attr("data-count") != 1) {
 				   //$(this).css("display","none");
+				   //$(this).hide();
 				   $(this).removeClass('active');
 				   $(this).css("opacity","0");
+				   $(this).css("left","100000px");
 			   }
 			   });
 		}
@@ -166,14 +168,17 @@ var countFeatures = 0;
 			  
 			   if($(this).hasClass('active') && ($(this).attr("data-count") < countFeatures)) {
 			   	 var t = $(this);
+			   	 
 				  $(t).next().addClass('active');
 				  $(t).removeClass('active');
 				  
 				  if(transitiontype == "crossdissolve") {
+				  	$(t).next().css("left","0px");
 					  $(t).next().animate({
 					   	  opacity: 1
 				   	  }, 1000, function() {
 					   	  $(t).css("opacity","0");
+					   	  $(t).css("left","100000px");
 				   	  });
 			   	  }
 				  
@@ -185,9 +190,12 @@ var countFeatures = 0;
 				   
 				   if(transitiontype == "crossdissolve") {
 					   $('.collegeFeature li:first-child').css("opacity","1");
+					   $('.collegeFeature li:first-child').css("left","0px");
 					   $(t).animate({
 					   	  opacity: 0
-				   	  }, 1000 );
+				   	  }, 1000, function() {
+					   	  $(t).css("left","10000000px");
+				   	  });
 			   	  }
 				   
 				    $('.collegeFeature li:first-child').addClass('active');
@@ -277,10 +285,12 @@ var countFeatures = 0;
 			   
 			   if($(this).hasClass('active') && ($(this).attr("data-count") < countFeatures)) {
 			   	  var t = $(this);
+			   	  $(t).next().css("left","0px");
 			   	  $(t).next().animate({
 				   	  opacity: 1
 			   	  }, 1000, function() {
 				   	  $(t).css("opacity","0");
+				   	  $(t).css("left","1000000px");
 			   	  });
 			   	  
 			   	 
@@ -299,9 +309,12 @@ var countFeatures = 0;
 				  
 				  
 				  $('.collegeFeature li:first-child').css("opacity","1");
+				  $('.collegeFeature li:first-child').css("left","0px");
 				   $(t).animate({
 				   	  opacity: 0
-			   	  }, 1000 );
+			   	  }, 1000, function() {
+				   	  $(t).css("left","100000px");
+			   	  });
 				  
 				   $('.collegeFeature li:first-child').addClass('active');
 				   
@@ -340,6 +353,7 @@ var countFeatures = 0;
 			   
 			   if($(this).hasClass('active') && ($(this).attr("data-count") != 1)) {
 			   	 var t = $(this);
+			   	 
 				  $(t).prev().addClass('active');
 				  $(t).removeClass('active');
 				  
@@ -370,12 +384,15 @@ var countFeatures = 0;
 			   if($(this).hasClass('active') && ($(this).attr("data-count") != 1)) {
 			   	 var t = $(this);
 				  $(t).prev().addClass('active');
+				   $(t).prev().css("left","0px");
 				  $(t).removeClass('active');
 				  
 				  $(t).prev().css("opacity","1");
 				  $(t).animate({
 				   	  opacity: 0
-			   	  }, 1000);
+			   	  }, 1000, function() {
+				   	  $(t).css("left","100000px");
+			   	  });
 
 				   
 				   return false;
@@ -385,11 +402,14 @@ var countFeatures = 0;
 				  $(t).removeClass('active');
 				   
 				   
+				   
 				    $('.collegeFeature li:last-child').addClass('active');
+				    $('.collegeFeature li:last-child').css("left","0px");
 				    $('.collegeFeature li:last-child').animate({
 				   	  opacity: 1
 			   	  }, 1000, function() {
 				   	  $(t).css("opacity","0");
+				   	  $(t).css("left","100000px");
 			   	  });
 				    
 				    
