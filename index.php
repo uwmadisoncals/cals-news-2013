@@ -415,7 +415,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 							<h2>Podcals</h2>
 							
 							<?php switch_to_blog(20); ?>
-<?php query_posts("posts_per_page=1&cat=17"); ?>
+<?php query_posts('category_name=podcals&posts_per_page=1'); ?>
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post();  ?>
 
@@ -431,7 +431,9 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 							// echo '" alt="" />';
 
 						} ?>
+						
 			<div class="boxContent">
+			<?php the_powerpress_content(); ?>
 											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
 											<p><?php the_time('l, F jS, Y') ?></p>
                                              </div>
