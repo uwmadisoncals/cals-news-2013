@@ -425,9 +425,9 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 		    				echo get_the_post_thumbnail($page->ID, 'large');
  
 		    				} else {
-							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
+							echo "<img src='".get_template_directory_uri()."/images/podcastBg.jpg' alt=' '>";
 							 //echo '<img src="';
-							 echo catch_that_news_image();
+							 //echo catch_that_news_image();
 							// echo '" alt="" />';
 
 						} ?>
