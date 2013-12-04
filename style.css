@@ -99,6 +99,43 @@ body {
 	width: 960px;	
 }
 
+.searchSidebar {
+	float: right;
+	width: 230px;
+}
+
+.recentPostsSideBar {
+	display: block;
+	
+	top: 0px;
+	right: 0px;
+	z-index: 2;
+	padding: 20px;
+	width: 230px;
+	background: #fff;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	color: #343434;
+	box-sizing: border-box;
+	-moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+	overflow: hidden;
+}
+
+.recentPostsSideBar h4 {
+
+font-family: "Open Sans";
+font-weight: bold;
+font-size: 12px;
+text-transform: uppercase;
+}
+
+.recentPostsSideBar li {
+	margin-bottom: 14px;
+}
+
 #branding hgroup {
 
 }
@@ -1045,7 +1082,7 @@ border-radius: 0px;
 	clear: both;
 	color: #222;
 	font-size: 26px;
-	font-weight: bold;
+	font-weight: 300;
 	line-height: 1.5em;
 	/*padding-bottom: 0.3em;*/
 	padding-top: 15px;
@@ -3604,7 +3641,8 @@ h1, h2, h3, p, ul, ol, pre, dl {
 h1, h2, #super-list, .element, .tagline, #index-list, 
 .super-list .link {
   /*font-family: 'Helvetica Neue', Arial, sans-serif;*/
-  font-family: 'Merriweather', Georgia, serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
 	font-size: 36px;
 	font-weight: normal;
 }
@@ -4411,6 +4449,12 @@ transform: rotate(900deg);
 	margin-top: 12px;
 }
 
+.campuseventsBox h3.spotlight_title {
+	font-size: 15px;
+	line-height: 20px;
+	margin-top: 12px;
+}
+
 .home .row .box {
 	height: 200px;
 	
@@ -4432,6 +4476,29 @@ transform: rotate(900deg);
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	margin: 0px;
+}
+
+.categoryItem {
+	font-size: 13px;
+	font-weight: bold;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	color: rgba(0,0,0,0.6);
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.imagePresent .categoryItem {
+	font-size: 13px;
+	position: absolute;
+	top: 20px;
+	left:20px;
+	z-index:2;
+	color: rgba(255,255,255,0.9);
+	font-family: "Open Sans", sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 }
 
 .box.span-50 {
@@ -4484,6 +4551,10 @@ transform: rotate(900deg);
 	color: #deb846;
 	line-height: 1.4em;
 	font-size: 11px;
+}
+
+.newsItem .dateheading {
+	color: #ae7619
 }
 
 .box .bottomShade {
@@ -6449,6 +6520,9 @@ footer .inner {
 
 footer a {
 	color: #bb8826;
+}
+.post footer a {
+	color: #bb2726;
 }
 
 footer .inner #pre-footer #quick_links {

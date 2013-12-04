@@ -43,7 +43,32 @@ if ( 'content' != $current_layout ) :
 	
 	<?php get_template_part('nav_menu', 'sidebar');  ?>
 	
-	
+	<div class="searchSidebar">
+	<div class="recentPostsSideBar">
+	<h4>Latest News</h4>
+	<ul>
+				 
+				 <?php
+
+	 query_posts( 'cat=-355,-356,-357,-366,-379,-380,-381,-386,-387,-388&order=DESC&orderby=DATE&posts_per_page=5' ); 
+
+		// The Loop
+		while ( have_posts() ) : the_post();
+			echo '<li><a href="';
+			the_permalink();
+			echo '">';
+			the_title();
+			echo '</a></li>';
+		endwhile;
+		
+		// Reset Query
+		wp_reset_query();
+		
+		?>
+              	</ul>
+	</div>
+	</div>
+
 	
 	<!--<div id="secondary" class="widget-area" role="complementary">
 			
