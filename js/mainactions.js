@@ -24,13 +24,26 @@ var countFeatures = 0;
 	  
 	  
 	  function anchoredFooter() {
+	  	  var footerElem = $("#colophon");
+	  	  var threshHold = 0;
 		  var bodyH = $("body").height();
 		  var viewH = $(window).height();
+		  var footerH = footerElem.height();
 		  
-		  if(bodyH < viewH) {
-		  	$("#colophon").addClass("fixedBottom");
+		  
+		  if(footerElem.hasClass("fixedBottom")) {
+		  		console.log(bodyH+footerH+threshHold + " : " + viewH);
+			  if((bodyH+footerH+threshHold) < viewH) {
+			  	//footerElem.addClass("fixedBottom");
+			  } else {
+			  	footerElem.removeClass("fixedBottom");
+			  }
 		  } else {
-		  	$("#colophon").removeClass("fixedBottom");
+			  if(bodyH < viewH) {
+			  	footerElem.addClass("fixedBottom");
+			  } else {
+			  	//footerElem.removeClass("fixedBottom");
+			  }
 		  }
 	  }
 	  

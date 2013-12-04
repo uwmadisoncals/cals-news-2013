@@ -8,7 +8,11 @@
 ?>
 <?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
+	 <?php	if ( has_post_thumbnail() ) { ?>
+		 					<div class="featuredImage">
+		    					<?php echo get_the_post_thumbnail($page->ID, 'large'); ?>
+		 					</div>
+						<?php } ?>
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
