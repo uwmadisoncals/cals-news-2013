@@ -23,6 +23,25 @@ var countFeatures = 0;
 	  },1000);
 	  
 	  
+	  function anchoredFooter() {
+		  var bodyH = $("body").height();
+		  var viewH = $(window).height();
+		  
+		  if(bodyH < viewH) {
+		  	$("#colophon").addClass("fixedBottom");
+		  } else {
+		  	$("#colophon").removeClass("fixedBottom");
+		  }
+	  }
+	  
+	  //run on page load
+	  anchoredFooter(); 
+	  
+	  //recheck when the window is resized
+	  $( window ).resize(function() {
+	 		anchoredFooter(); 
+	  });
+	  
 	  $('.newsItem .additionalContent').each(function(index) {
 		//console.log($(this).next().html());
 		var i = $(this).children().hasClass("noImageSpacer2");
