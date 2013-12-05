@@ -175,7 +175,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
   <?php endwhile; ?>
 <?php endif; ?>
 <?php //restore_current_blog(); ?>							
-							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Highlights</a>
+							<a href="<?php get_site_url(); ?>/category/highlights/" class="moreButton">More Highlights</a>
 						
 						
 						<div class="windows8">
@@ -251,7 +251,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 <?php endif; ?>
 <?php //restore_current_blog(); ?>	
 							
-							<a href="http://news.dev.cals.wisc.edu" class="moreButton">More Videos</a>
+							<a href="<?php get_site_url(); ?>/category/departments/featured-videos/" class="moreButton">More Videos</a>
 						<div class="windows8">
 							<div class="wBall" id="wBall_1">
 							<div class="wInnerBall">
@@ -449,7 +449,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 <?php endif; ?>
 <?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?>
-<a href="http://news.dev.cals.wisc.edu/category/departments/cals-faces/" class="moreButton">More Podcals</a>
+<a href="<?php get_site_url(); ?>/category/departments/podcals/" class="moreButton">More Podcals</a>
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
 							<div class="wInnerBall">
