@@ -3994,7 +3994,7 @@ min-height: 220px;
 }
 
 .row .box {
-	background: #fff;
+	background: transparent;
 	
 	position: relative;
 	-moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.3);
