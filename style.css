@@ -133,6 +133,29 @@ body {
 	overflow: hidden;
 }
 
+@-moz-document url-prefix() {
+	.recentPostsSideBar {
+		display: block;
+		
+		top: 0px;
+		right: 0px;
+		z-index: 2;
+		padding: 20px;
+		width: auto;
+		background: #fff;
+		-webkit-border-radius: 4px;
+		-moz-border-radius: 4px;
+		border-radius: 4px;
+		color: #343434;
+		box-sizing: border-box;
+		-moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+		-webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+		box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+		overflow: hidden;
+	}
+}
+
+
 .recentPostsSideBar h4 {
 
 font-family: "Open Sans";
@@ -5461,10 +5484,11 @@ display: block;
 .home .collegeFeature li .featureCaption, .home .iosSlider .featureCaption {
 	display:block;
 	position: absolute;
-	top: 224px;
+	bottom: 195px;
+	top: auto;
 	left: 0px;
 	right: 0px;
-	height: 80px;
+	
 	z-index:5;
 	color: #fff;
 }
