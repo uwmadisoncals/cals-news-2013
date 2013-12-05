@@ -195,6 +195,8 @@ function twentyeleven_setup() {
 	// Larger images will be auto-cropped to fit, smaller ones will be ignored. See header.php.
 	set_post_thumbnail_size( $custom_header_support['width'], $custom_header_support['height'], true );
 
+
+	add_filter('the_permalink', 'cals_news_media_title_url');
 	// Add Twenty Eleven's custom image sizes.
 	// Used for large feature (header) images.
 	add_image_size( 'large-feature', $custom_header_support['width'], $custom_header_support['height'], true );
