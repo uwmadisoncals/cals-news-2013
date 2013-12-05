@@ -5023,6 +5023,10 @@ background-size: 100% auto;
 	z-index:2;
 }*/
 
+.ie10 .dropin, .ie10 .dropin2, .ie10 .dropin3, .ie10 .dropin4, .ie10 .dropin5 {
+	opacity: 1;
+}
+
 .dropin {
 	opacity: 0;
 	-webkit-animation-name: dropin;

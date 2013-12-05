@@ -6,3 +6,7 @@
   line-height:0;
   position:absolute;
 }
+
+.dropin, .dropin2, .dropin3, .dropin4, .dropin5 {
+	opacity: 1;
+}
