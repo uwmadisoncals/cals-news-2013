@@ -450,6 +450,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 <?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?>
 <a href="<?php get_site_url(); ?>/category/departments/podcals/" class="moreButton">More Podcals</a>
+
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
 							<div class="wInnerBall">
@@ -548,11 +549,31 @@ echo $category[0]->slug; ?></div>
 					<span class="number">10</span>
     		</div>
     		
-    		<a href="<?php the_permalink(); ?>" class="highlight">
-	    		<div class="loadingSpinner" style="display: none;">
-	    			<div class="progress" style="width:100%;"></div>
-	    		</div>
-    		</a>
+    		<a href="<?php the_permalink(); ?>" class="highlight"><?php the_title(); ?></a>
+    		<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div> 
+
+						<div class="shade"></div>
     	</div>
     	
     </div>

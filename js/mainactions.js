@@ -76,6 +76,11 @@ var countFeatures = 0;
 		  $(this).closest(".box").find(".shade").fadeIn(400);
 	   });
 	   
+	   $(".newsItem a").click(function() {
+	   		$(this).closest(".newsItem").find("img").addClass("blurAnim");
+	   		$(this).next().show();
+	   });
+	   
 	   
 	   //Check to see if the homepage feature exists
 	   var checkcol = $('.collegeFeature').html();
