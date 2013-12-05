@@ -96,6 +96,19 @@ function create_post_type() {
 		)
 	);
 }
+
+function cals_news_media_title_url($permalink){
+	global $post;
+	//check if post has been assigned an alternate url
+	$media_title_url = get_post_meta($post->ID, 'media_title_url', true);
+	if($media_title_url!=""){
+		//replace url with alternate url and add "target=_blank" to have link open in new page 
+		return $media_title_url.'" target="_blank';
+	} else {
+		return $permalink;
+	}
+}
+
  
 function twentyeleven_setup() {
 
