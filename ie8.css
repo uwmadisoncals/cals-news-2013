@@ -1,11 +1,30 @@
-body {
-	background: #ebebe1 url("images/CALS_bg.jpg") repeat-x;
+.headeroverlay {
+	background: #fff;
 }
 
-nav ul li a:link {
-	font-size: 11px;
+.headeroverlay a {
+	color: #000;
+}
+.headeroverlay a:hover {
+	background: #b8b8b8;
 }
 
-#branding input#s {
-	background-color: #8f8f8f;
+#access .totop {
+	display: none;
+}
+
+.headershade {
+	display: none;
+}
+
+.box.span-50 {
+	width: 49%;
+}
+
+.box.span-33 {
+	width: 32%;
+}
+
+.collegeFeature .slideImage {
+	background-position: center top;
 }
