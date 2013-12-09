@@ -138,7 +138,7 @@ $current_colorscheme = $options['link_color'];
 <body <?php body_class(); ?> id="<?php echo $current_colorscheme; ?>">
 <div class="ieWarning" style="display: none;">
 	<h1>It appears you have adjusted your browser to force compatibility mode.  You will have a less than optimal experience when viewing this site as it was designed with modern web standards in mind.</h1>
-	<p>To allow this site to behave normally, turn this off by pressing <strong>alt</strong> then click <strong>Tools</strong> and then <strong>Compatibility View Settings</strong>.  If you uncheck <strong>Display all websites in compatibility view</strong>.</p>
+	<p>To allow this site to behave normally, turn this off by pressing <strong>alt</strong> then click <strong>Tools</strong> and then <strong>Compatibility View Settings</strong>.  If you uncheck <strong>Display all websites in compatibility view</strong> your browser will be restored to its default behavior for compatibility mode.</p>
 	<a href="#" class="button ieWarningDismissOnce">Dismiss</a> or <a href="#" class="button ieWarningDismiss">Dismiss and don't bother me again</a>
 </div>
 <div id="page" class="hfeed">
