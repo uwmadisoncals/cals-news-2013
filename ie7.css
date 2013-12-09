@@ -1,31 +1,41 @@
-body {
-	background: #ebebe1 url("images/CALS_bg.jpg") repeat-x;
+.headeroverlay {
+	background: #fff;
 }
 
-nav ul li a:link {
-	font-size: 11px;
+.headeroverlay a {
+	color: #000;
+}
+.headeroverlay a:hover {
+	background: #b8b8b8;
 }
 
-.single #content, .page #content, .search-results #content {
-	position: relative;
-  background: #fff;
-  padding: 30px;
-  color: #343434;
-  border: 1px solid #b7b7b7;
-  box-sizing: border-box;
-  -moz-box-shadow: 0px 1px 5px #a9a9a9;
-  -webkit-box-shadow: 0px 1px 5px #a9a9a9;
-  box-shadow: 0px 1px 5px #a9a9a9;
-  float: left;
-  width: 637px;
-  margin-right: -20px;
+#access .totop {
+	display: none;
 }
 
-#nav_sidebar {
+.headershade {
+	display: none;
+}
+
+.box.span-50 {
+	width: 49%;
+}
+
+.box.span-33 {
+	width: 32%;
+}
+
+.collegeFeature .slideImage {
+	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+#page {
 	position: relative;
 	z-index:5;
 }
 
-#branding input#s {
-	background-color: #8f8f8f;
+.ieFooter {
+	background: #3c3b3b;
+	height: 400px;
 }

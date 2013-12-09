@@ -27,4 +27,10 @@
 
 .collegeFeature .slideImage {
 	background-position: center top;
+	background-repeat: repeat-x;
+}
+
+.ieFooter {
+	background: #3c3b3b;
+	height: 400px;
 }
