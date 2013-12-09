@@ -18,6 +18,50 @@ var countFeatures = 0;
 		  
 	   });*/
 	   
+	   var ieWarning = localStorage.getItem("ieWarning");
+	   
+	   var agentStr = navigator.userAgent;
+        var modeType;
+        if (agentStr.indexOf("Trident/5.0") > -1) {
+            if (agentStr.indexOf("MSIE 7.0") > -1)
+                modeType = "IE9 Compatibility View";
+                
+               
+                
+            else
+                modeType = "IE9";
+        }
+        else if (agentStr.indexOf("Trident/4.0") > -1) {
+            if (agentStr.indexOf("MSIE 7.0") > -1)
+                modeType = "IE8 Compatibility View";
+                
+             
+                
+            else
+                modeType = "IE8";
+        }
+        else
+            modeType = "IE7";
+
+
+		if(modeType == "IE9 Compatibility View" || modeType == "IE8 Compatibility View") {
+			if(ieWarning != "dismiss") {
+				$(".ieWarning").slideDown();
+			}
+		}
+		
+		$(".ieWarningDismiss").click(function(e) {
+			e.preventDefault();
+			$(".ieWarning").slideUp();
+			localStorage.setItem("ieWarning","dismiss");
+		});
+		
+		$(".ieWarningDismissOnce").click(function(e) {
+			e.preventDefault();
+			$(".ieWarning").slideUp();
+			//localStorage.setItem("ieWarning","dismiss");
+		});
+	   
 	  setInterval(function() {
 		  $("body").toggleClass("relative");
 	  },1000);

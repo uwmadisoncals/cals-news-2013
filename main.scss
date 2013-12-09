@@ -78,6 +78,22 @@ footer, header, hgroup, menu, nav, section {
 /* =Structure
 ----------------------------------------------- */
 
+.ieWarning {
+	position: absolute;
+	top: 0px;
+	left: 100px;
+	right: 100px;
+	z-index:70;
+	background: #fff url("images/ielogo.jpg") no-repeat;
+	background-position: 30px 30px;
+	padding: 30px;
+	padding-left: 40px;
+}
+
+.ieWarning h1 {
+	font-size: 20px;
+}
+
 #site-title, #site-description {
 position: absolute !important;
 
