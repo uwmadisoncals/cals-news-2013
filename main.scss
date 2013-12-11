@@ -6791,6 +6791,17 @@ footer .socialRef .facebook {
 }
 
 
+footer .socialRef .linkedin {
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	text-indent: -10000px;
+	background: url("images/linkedin.png") no-repeat;
+	border: none;
+	margin-left: 7px;
+}
+
 footer .socialRef .flickr {
 	display: block;
 	float: right;
