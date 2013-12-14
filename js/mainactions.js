@@ -64,7 +64,7 @@ var countFeatures = 0;
 	   
 	  setInterval(function() {
 		  $("body").toggleClass("relative");
-	  },1000);
+	  },1500);
 	  
 	  
 	  function anchoredFooter() {
@@ -93,10 +93,14 @@ var countFeatures = 0;
 	  
 	  //run on page load
 	  anchoredFooter(); 
+	  $(".headeroverlay, .headerbgBlur, .headerbgBlurImage").height($(".navWrapper").height());
+	 		$(".headerbgBlur, .headerbgBlurImage").width($(".navWrapper").width()); 
 	  
 	  //recheck when the window is resized
 	  $( window ).resize(function() {
 	 		anchoredFooter(); 
+	 		$(".headeroverlay, .headerbgBlur, .headerbgBlurImage").height($(".navWrapper").height());
+	 		$(".headerbgBlur, .headerbgBlurImage").width($(".navWrapper").width()); 
 	  });
 	  
 	  $('.newsItem .additionalContent').each(function(index) {

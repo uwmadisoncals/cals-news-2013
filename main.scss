@@ -78,6 +78,10 @@ footer, header, hgroup, menu, nav, section {
 /* =Structure
 ----------------------------------------------- */
 
+#menu-main-navigation {
+	padding-right: 180px;
+}
+
 .ieWarning {
 	position: absolute;
 	top: 0px;
@@ -7912,6 +7916,22 @@ border-radius: 3px;
 #mobile-menu, #mobile-filter {
 	display: none;
 }
+
+#mobile-menu {
+	display: none;
+	background: #fff;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 240px;
+	z-index:-1;
+}
+
+.mobileScroll {
+	position: relative;
+	z-index:1;
+}
+
 
 .noImageSpacer {
 	height: 260px;

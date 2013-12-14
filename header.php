@@ -137,6 +137,22 @@ $current_colorscheme = $options['link_color'];
 ?>
 
 <body <?php body_class(); ?> id="<?php echo $current_colorscheme; ?>">
+
+<div id="mobile-menu">
+	<div id="mobile-menu-inner">
+	<div class="mobile-search"><input type="search" placeholder="Search" /></div>
+	<!--<a href="/" class="mobileHome">Home</a>-->
+	<div id="mobile-menu-container"></div>
+	</div>
+</div>
+<div id="mobile-filter">
+	<div id="mobile-filter-inner">
+	</div>
+</div>
+
+<div class="mobileScroll">
+<a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
+
 <div class="ieWarning" style="display: none;">
 	<h1>It appears you have adjusted your browser to force compatibility mode.  You will have a less than optimal experience when viewing this site as it was designed with modern web standards in mind.</h1>
 	<p>To allow this site to behave normally, turn this off by pressing <strong>alt</strong> then click <strong>Tools</strong> and then <strong>Compatibility View Settings</strong>.  If you uncheck <strong>Display all websites in compatibility view</strong> your browser will be restored to its default behavior for compatibility mode.</p>
@@ -208,7 +224,9 @@ $current_colorscheme = $options['link_color'];
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+				<div class="navWrapper clearfix">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				</div>
 				
 				<!-- The markup of the navigation if it is hard coded -->
 				<!--<ul class="clearfix">
@@ -283,17 +301,7 @@ $pages = get_pages();
 		</div>
 	</header><!-- #branding -->
 
-<div id="mobile-menu">
-	<div id="mobile-menu-inner">
-	<div class="mobile-search"><input type="search" placeholder="Search" /></div>
-	<!--<a href="/" class="mobileHome">Home</a>-->
-	<div id="mobile-menu-container"></div>
-	</div>
-</div>
-<div id="mobile-filter">
-	<div id="mobile-filter-inner">
-	</div>
-</div>
+
 
 <div class="headerPhotoBg">
 <div class="headertransition"></div>

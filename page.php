@@ -13,8 +13,6 @@
 
 get_header(); ?>
 
-<div class="mobileScroll">
-<a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 
 	<div id="main">
 
