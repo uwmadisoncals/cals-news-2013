@@ -958,9 +958,9 @@ var countFeatures = 0;
 			if($(".collegeFeature").hasClass("mobileShown")) {
 				
 			} else {
-			$(".collegeFeature").hide();
+			//$(".collegeFeature").hide();
 			}
-			$('.iosSlider').iosSlider({
+			/*$('.iosSlider').iosSlider({
 					desktopClickDrag: true,
 					autoSlideTimer: 9000,
 					snapToChildren: true,
@@ -971,7 +971,7 @@ var countFeatures = 0;
 					scrollbarMargin: '0',
 					scrollbarBorderRadius: '1em',
 					
-				});
+				});*/
 
 			
 			
