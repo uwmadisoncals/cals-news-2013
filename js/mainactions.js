@@ -214,7 +214,7 @@ var countFeatures = 0;
 				$(".headerbgBlurImage").css("background-size",headerbackground);
   		});
 		
-		   $('.iosSlider .slider').html(mobileFeatures); 
+		   //$('.iosSlider .slider').html(mobileFeatures); 
 		 
 		var duration = 20000;
 		var halfd = duration /2;
