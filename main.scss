@@ -71,6 +71,10 @@ footer, header, hgroup, menu, nav, section {
 	display: none;
 }
 
+body.Mozilla .timer {
+	opacity: 0;
+}
+
 /*#main #cals_uwds {
 	display: block;
 }*/
