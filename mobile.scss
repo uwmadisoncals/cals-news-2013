@@ -163,7 +163,7 @@ width: 100%;
 }
 
 	.home .collegeFeature .timer, body.home div.collegeFeature a.next:link, body.home div.collegeFeature a.previous:link {
-		display: none;
+		opacity: 0;
 	}
 	
 	.mobileNavTriggerLarge {
@@ -371,6 +371,10 @@ width: 100%;
 width: 100%;
 		
 }
+
+	.iPhone .mobileScroll {
+		position: relative;
+	}
 	
 	#mobile-menu {
 	display: block;
@@ -378,7 +382,7 @@ width: 100%;
 }
 	
 	.home .collegeFeature .timer, body.home div.collegeFeature a.next:link, body.home div.collegeFeature a.previous:link {
-		display: none;
+		opacity: 0;
 	}
 	
 	.mobileNavTriggerLarge {
@@ -562,3 +566,4 @@ width: 100%;
 		z-index:50;
 	}
 }
+
