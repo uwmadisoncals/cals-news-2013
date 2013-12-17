@@ -27,7 +27,7 @@ var countFeatures = 0;
                 modeType = "IE9 Compatibility View";
                 
                
-                
+              
             else
                 modeType = "IE9";
         }
