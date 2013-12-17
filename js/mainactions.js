@@ -19,7 +19,7 @@ var countFeatures = 0;
 	   });*/
 	   
 	   var ieWarning = localStorage.getItem("ieWarning");
-	   
+	    
 	   var agentStr = navigator.userAgent;
         var modeType;
         if (agentStr.indexOf("Trident/5.0") > -1) {
