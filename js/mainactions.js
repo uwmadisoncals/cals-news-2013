@@ -8,15 +8,6 @@ if(sidebarnav == "") {
 
 var countFeatures = 0;
 	   
-	  /* $("a.moreButton").mouseover(function() {
-		  $(this).parent().find("img").addClass("blurAnim");
-		  
-	   });
-	   
-	   $("a.moreButton").mouseout(function() {
-		  $(this).parent().find("img").removeClass("blurAnim");
-		  
-	   });*/
 	   
 	   var ieWarning = localStorage.getItem("ieWarning");
 	    

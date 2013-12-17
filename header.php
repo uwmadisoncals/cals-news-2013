@@ -100,7 +100,7 @@
 
 
   <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/min/master.min.js"></script>
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/mainactions.js"></script>
+  
   
 
 <!--[if lt IE 9]>
