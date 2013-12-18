@@ -113,6 +113,25 @@ var countFeatures = 0;
     	    $("#mobile-menu-inner").css("-moz-transform", "scale(0.8)");
 	  });
 	  
+	  $("#mobile-menu").css("z-index", "-1");
+    	$("#mobile-menu").css("opacity", "0");
+    	$(".mobileNavTriggerLarge").hide();
+	    	$(".mobileScroll").css("-webkit-transition", "0.3s");	
+    	    $(".mobileScroll").css("-webkit-transform", "translate3d(0px,0,0)");
+    	    $("#mobile-menu").css("-webkit-transition", "0.3s");
+    	    $("#mobile-menu").css("-webkit-transform", "translate3d(0px,0,0)");
+    	    $("#mobile-menu-inner").css("-webkit-transition", "0.3s");
+    	    $("#mobile-menu-inner").css("-webkit-transform", "scale(0.8)");
+    	    //$("#access").css("-webkit-transition", "0.3s");
+    	    //$("#access").css("-webkit-transform", "translate3d(0px,0,0)");
+    	    
+    	     $(".mobileScroll").css("-moz-transition", "0.3s");	
+    	    $(".mobileScroll").css("-moz-transform", "translate3d(0px,0,0)");
+    	    $("#mobile-menu").css("-moz-transition", "0.3s");
+    	    $("#mobile-menu").css("-moz-transform", "translate3d(0px,0,0)");
+    	    $("#mobile-menu-inner").css("-moz-transition", "0.3s");
+    	    $("#mobile-menu-inner").css("-moz-transform", "scale(0.8)");
+	  
 	  $('.newsItem .additionalContent').each(function(index) {
 		//console.log($(this).next().html());
 		var i = $(this).children().hasClass("noImageSpacer2");
@@ -917,6 +936,7 @@ var countFeatures = 0;
 			};
 			
 			
+			
 			function slideChange(args) {
 						
 				/*$('.sliderContainer .slideSelectors .item').removeClass('selected');
@@ -1154,7 +1174,7 @@ var countFeatures = 0;
     	   return false; 
     });
 			
-			    $('.mobileSettingsTrigger').bind('touchend','click', function(){
+			    $('.mobileSettingsTrigger').bind('touchend', function(){
 				   
 				    $("#mobile-menu").hide();
 				    
@@ -1218,6 +1238,7 @@ var countFeatures = 0;
     
     } else {
     /* Event listeners for when its not a mobile browser */
+ 
 			$('.mobileNavTrigger').bind('click', function(){
 					
 					
@@ -1279,7 +1300,7 @@ var countFeatures = 0;
 			    
 			    
 			    $('.mobileNavTrigger').bind('click', function(){
-			    
+			      
 				    $("#mobile-filter").hide();
     	if(menushown) {
     		$(".mobileNavTriggerLarge").hide();
@@ -1537,7 +1558,6 @@ var countFeatures = 0;
 
 			  	*/
 				
-			
 		
 	    }
 	};
