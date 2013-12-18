@@ -132,9 +132,11 @@ $current_colorscheme = $options['link_color'];
 
 <div id="mobile-menu">
 	<div id="mobile-menu-inner">
-	<div class="mobile-search"><input type="search" placeholder="Search" /></div>
+	<!--<div class="mobile-search"><input type="search" placeholder="Search" /></div>-->
 	<!--<a href="/" class="mobileHome">Home</a>-->
-	<div id="mobile-menu-container"></div>
+	<div id="mobile-menu-container" aria-hidden="true">
+		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	</div>
 	</div>
 </div>
 <div id="mobile-filter">
@@ -144,6 +146,7 @@ $current_colorscheme = $options['link_color'];
 
 <div class="mobileScroll">
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
+<a href="#" class="mobileNavTrigger" aria-hidden="true">Navigation</a>
 
 <div class="ieWarning" style="display: none;">
 	<h1>It appears you have adjusted your browser to force compatibility mode.  You will have a less than optimal experience when viewing this site as it was designed with modern web standards in mind.</h1>
@@ -206,8 +209,7 @@ $current_colorscheme = $options['link_color'];
 			
 			<nav id="access" role="navigation">
 				<div class="headeroverlay">
-				<a href="#" class="mobileNavTrigger">Navigation</a>
-				<a href="#" class="mobileSettingsTrigger">Navigation</a>
+				
 				<div class="mobileScrollTop"></div>
 				<div class="centerfix relative">
 				<a href="#" class="totop" title="Go to the top of the page">Go to the top of the page</a>

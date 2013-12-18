@@ -40,7 +40,18 @@ module.exports = function(grunt) {
 	    tasks: ['sass','concat']
 	    
 	  }
-	}
+	},
+	
+	imagemin: {                          // Task
+	    dynamic: {                         // Another target
+	      files: [{
+	        expand: true,                  // Enable dynamic expansion
+	        cwd: 'images/',                   // Src matches are relative to this path
+	        src: ['**/*.{png,jpg,gif}'],   // Actual patterns to match
+	        dest: 'dist/'                  // Destination path prefix
+	      }]
+	    }
+	  }
     
   });
   grunt.event.on('watch', function(action, filepath, target) {
@@ -52,6 +63,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-imagemin');
   
 
   // Default task(s).
@@ -59,6 +71,7 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['sass']);
   grunt.registerTask('default', ['concat']);
   grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ['imagemin']);
   
  
 
