@@ -39,7 +39,7 @@ University of Wisconsin Foundation.</p>
         </div>
         
         <div class="copyright">
-        	<div>&copy;Copyright 2014 The Board of Regents of the University of Wisconsin System <a href="http://wisc.edu">University of Wisconsin-Madison</a></div>
+        	<div>&copy;Copyright 2013 The Board of Regents of the University of Wisconsin System <a href="http://wisc.edu">University of Wisconsin-Madison</a></div>
 	        <img src="<?php echo get_template_directory_uri(); ?>/images/footer_crest.png" alt="University of Wisconsin Madison" align="center" />
 	        
 	       
