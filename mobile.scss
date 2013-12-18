@@ -166,6 +166,10 @@ width: 100%;
 		margin-left: 1%;
 	}
 	
+	.headerPhotoBg {
+		z-index:-1;	
+	}
+	
 	#access {
 		opacity: 0;
 	}
@@ -400,6 +404,10 @@ width: 100%;
 	.collegeFeature li .featureCaption .centered, .iosSlider .featureCaption .centered {
 width: 100%;
 		
+}
+
+.headerPhotoBg {
+	z-index:-1;
 }
 
 #access {
