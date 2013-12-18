@@ -43,7 +43,7 @@ $(document).ready(function(){
 	if(offset3 && offset2) {
 	
 	if(offset3.left && offset2.top) {
-		var offsetPosition2 = "-"+offset3.left+"px -" + offset2.top + "px";
+		//var offsetPosition2 = "-"+offset3.left+"px -" + offset2.top + "px";
 		$(".slideBlurImage").css("background-position",offsetPosition1);
 		$(".headerbgBlurImage").css("background-position",offsetPosition2);
 	}
