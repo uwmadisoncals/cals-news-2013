@@ -3,7 +3,7 @@ $(function(){
 
 function imageBoxFit() {
 	$( "#page .box" ).each(function( index ) {
-	  var imgS = $(this).find("img");
+	  var imgS = $(this).find("img").first();
 	  var imgSH = $(imgS).height();
 	  var imgSW = $(imgS).width();
 	  
