@@ -481,8 +481,8 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 			
 
 
-			
-   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=4&cat=-18,-14,-17,-21,-25,-26,-27,-12,-11' ); } ?>
+			<!-- Main posts excluding CALS Faces, Podcals, Highlights -->
+   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=3&cat=-14,-17,-21,-25,-26,-27,-11' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 
