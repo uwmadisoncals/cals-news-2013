@@ -341,7 +341,7 @@ $url = $thumb['0']; echo $url;
 				
 										}
 					    				
-				    				?>') no-repeat; background-size: 100% auto;">
+				    				?>') no-repeat; background-size: 100% auto; background-position: 0px 50%;">
 				    				
 				    				<div class="headerBgContainer"><div class="headerbgBlur"><div class="headerbgBlurImage"></div></div></div>					
 				    				<div class="slideBlurImage"></div>
