@@ -525,6 +525,10 @@ echo $category[0]->slug; ?>">
     		<div class="text">
     			<div class="glyph"><div class="symbol"></div></div>
     			<div class="titleheading">
+    			<div class="categoryItem"><?php
+$category = get_the_category(); 
+echo $category[0]->cat_name;
+?></div>
     			<h3><?php the_title(); ?></h3>
     			</div>
     			<div class="excerpt">
@@ -630,8 +634,14 @@ echo $category[0]->slug; ?>">
     		<div class="text">
     			<div class="glyph"><div class="symbol"></div></div>
     			<div class="titleheading">
+    			<div class="categoryItem"><?php
+$category = get_the_category(); 
+echo $category[0]->cat_name;
+?></div>
     			<h3><?php the_title(); ?></h3>
+    			
     			</div>
+    			
     			<div class="excerpt">
     			
 	    		
