@@ -32,6 +32,10 @@ function imageBoxFit() {
 
 imageBoxFit();
 
+setTimeout(function() {
+	imageBoxFit();
+},1000);
+
 var sidebarnav = $("#nav_sidebar .pagenav:first-child").html();
 if(sidebarnav == "") {
 	$("#nav_sidebar").hide();
