@@ -586,7 +586,7 @@ echo $category[0]->slug; ?></div>
 <?php wp_reset_query(); ?>
 
 			<!-- Main posts excluding CALS Faces, Podcals, Highlights -->
-   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=0&cat=-14,-17,-21,-25,-26,-27,-11,-7' ); } ?>
+   		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=0&cat=-14,-17,-21,-25,-26,-27,-11,-7,-8' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 
