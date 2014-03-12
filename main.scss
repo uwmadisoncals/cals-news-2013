@@ -344,6 +344,30 @@ text-transform: uppercase;
 	
 }
 
+.shareButtons {
+	float: right;
+	margin-top: -30px;
+	
+}
+
+.shareButtons .facebookShare {
+	display:block;
+	width: 30px;
+	height: 30px;
+	font-size: 0px;
+	float: right;
+	margin-left: 2px;
+}
+
+.shareButtons .twitterShare {
+	display:block;
+	width: 30px;
+	height: 30px;
+	font-size: 0px;
+	float: right;
+	margin-left: 2px;
+}
+
 /* One column */
 .one-column #page {
 	/*max-width: 940px;*/
