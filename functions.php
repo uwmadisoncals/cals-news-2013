@@ -97,6 +97,12 @@ function create_post_type() {
 	);
 }
 
+/* Provide temporary fix for DDOS attacks using XMLRPC */
+add_filter( ‘xmlrpc_methods’, function( $methods ) {
+   unset( $methods['pingback.ping'] );
+   return $methods;
+} );
+
 function cals_news_media_title_url($permalink){
 	global $post;
 	//check if post has been assigned an alternate url
