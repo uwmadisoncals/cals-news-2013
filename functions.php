@@ -109,7 +109,7 @@ function cals_news_media_title_url($permalink){
 	$media_title_url = get_post_meta($post->ID, 'media_title_url', true);
 	if($media_title_url!=""){
 		//replace url with alternate url and add "target=_blank" to have link open in new page 
-		return $media_title_url.'" target="_blank';
+		return $media_title_url;
 	} else {
 		return $permalink;
 	}
