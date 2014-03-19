@@ -90,7 +90,7 @@ var countFeatures = 0;
 		});
 	   
 	  setInterval(function() {
-		  $("body").toggleClass("relative");
+		  $(".page body, .single body, .archive body").toggleClass("relative");
 	  },1500);
 	  
 	  

@@ -28,8 +28,9 @@
 			</strong>
                     <div><?php the_time('l, F jS, Y'); ?></div>
                     
-             <div class="shareButtons"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php permalink_link(); ?>" title="Share on Facebook" class="facebookShare" target="_blank"><?php include("facebookshare.svg"); ?>Share on Facebook</a> <a href="https://twitter.com/share?url=<?php permalink_link(); ?>&text=<?php
+             <div class="shareButtons"><a href="https://www.facebook.com/sharer/sharer.php?u=<?php permalink_link(); ?>" title="Share on Facebook" class="facebookShare" target="_blank"><?php include("facebookshare.svg"); ?>Share on Facebook</a> <a href="https://twitter.com/share?url=<?php echo wp_get_shortlink(); ?>&text=<?php
 $spaceurl=the_title_attribute('echo=0');
+$spaceurl=$spaceurl." via @UWMadisonCALS";
 $nonspaceurl=str_replace(' ','%20',$spaceurl);
 $nonspaceurl=str_replace(':','',$nonspaceurl);
 echo $nonspaceurl;

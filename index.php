@@ -641,6 +641,17 @@ echo $category[0]->cat_name;
     			
     			<div class="excerpt">
     			
+	    		<!-- Cals in the media venue if conditional -->
+	    		
+	    		<?php $media_venu = get_post_meta($post->ID, 'media_venue', true);
+				if($media_venu!=""){
+					return $media_venue;
+				} ?>
+				
+				<div><?php $academic_info = get_post_meta($post->ID, 'academic_info', true);
+				if($academic_info!=""){
+					return $academic_info;
+				} ?></div>
 	    		
 			<?php the_content_rss('', FALSE, '', 180); ?>
     			
