@@ -642,6 +642,22 @@ if($catslug != "Uncategorized") {
 
 ?></div>
     			<h3><?php the_title(); ?></h3>
+          <div class="academicInfo">
+            <?php
+  $category = get_the_category();
+  $catslug = $category[0]->cat_name;
+  if($catslug == "Newsmakers") {
+    //echo $catslug;
+    $academic_info = get_post_meta($post->ID, 'academic_info', true);
+        if($academic_info!=""){
+          echo $academic_info;
+    }
+
+  }
+
+  ?>
+
+          </div>
 
     			</div>
 
@@ -664,7 +680,19 @@ if($catslug != "Uncategorized") {
 
     			</div>
     			<div class="dateheading">
-    			<?php the_time('l, F jS, Y'); ?>
+            <?php
+  $category = get_the_category();
+  $catslug = $category[0]->cat_name;
+  if($catslug == "Newsmakers") {
+    //echo $catslug;
+
+
+  } else {
+    the_time('l, F jS, Y');
+  }
+
+  ?>
+
     			</div>
     			<div class="hiddendate"><?php echo "-"; the_time('Ymd') ?></div>
     			<div class="hiddengroup"><?php $category = get_the_category();
