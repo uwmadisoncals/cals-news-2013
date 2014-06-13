@@ -1121,6 +1121,55 @@ border-radius: 0px;
 
 /* =Content
 ----------------------------------------------- */
+.uwmadison_events {
+	margin-left: 0px;
+	list-style: none;
+}
+
+.uwmadison_events_title {
+	display: none;
+}
+
+.uwmadison_event {
+	color: #deb846;
+}
+
+.eventsBox .uwmadison_events_container {
+
+	ul {
+		margin-bottom: 0px;
+	}
+
+	.uwmadison_events_title {
+		display: none;
+	}
+
+	li.uwmadison_event {
+		border-top: none;
+
+		.event-title-and-subtitle {
+			display:block;
+
+			.uwmadison_event_title {
+				display:block;
+
+
+				a {
+					color: #fff;
+					font-size: 18px;
+					font-weight: 300;
+				}
+			}
+		}
+
+		.uwmadison_event_subtitle {
+			display: none;
+		}
+
+	}
+
+}
+
 
 .academicInfo {
 	font-size: 12px;
@@ -1131,7 +1180,7 @@ border-radius: 0px;
 .imagePresent .academicInfo {
 	color: rgba(255,255,255,0.8);
 }
- 
+
 #main {
 	clear: both;
 	padding: 0 0 0;
