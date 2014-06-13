@@ -540,7 +540,9 @@ echo $category[0]->slug; ?>">
     			</div>
     			<div class="hiddendate"><?php echo "-"; the_time('Ymd') ?></div>
     			<div class="hiddengroup"><?php $category = get_the_category();
-echo $category[0]->slug; ?></div>
+
+
+          echo $category[0]->slug; ?></div>
 
 
 					<span class="number">10</span>
@@ -633,7 +635,11 @@ echo $category[0]->slug; ?>">
     			<div class="titleheading">
     			<div class="categoryItem"><?php
 $category = get_the_category();
-echo $category[0]->cat_name;
+$catslug = $category[0]->cat_name;
+if($catslug != "Uncategorized") {
+  echo $catslug;
+}
+
 ?></div>
     			<h3><?php the_title(); ?></h3>
 
