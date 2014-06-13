@@ -346,35 +346,7 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 							<h2>Events</h2>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/aghall1.jpg" alt=" ">
 							<div class="boxContent">
-										<?php // Get RSS Feed(s)
-  include_once(ABSPATH . WPINC . '/rss.php');
-  $rss = fetch_rss('http://www.today.wisc.edu/events/feed/30.rss2');
-  $maxitems = 2;
-  $items = array_slice($rss->items, 0, $maxitems);
-?>
-
-
-  <?php if (empty($items)): ?>
-   <h3 class="spotlight_title">No Upcoming Events</h3>
-  <?php else:
-      foreach ( $items as $item ):
-        ?>
-        <h3 class="spotlight_title">
-          <a href='<?php echo $item['link']; ?>' title='<?php echo $item['title']; ?>'>
-
-            <?php $tempTitle = $item['title']; $newTitle = substr($tempTitle, 20, 60); ?>
-            <?php echo $newTitle."..."; ?>
-          </a>
-        </h3>
-        <p><?php $tempDate = $item['title']; $newDate = substr($tempTitle, 0, 18); ?>
-            <?php echo $newDate; ?></p>
-        <?php
-      endforeach;
-    endif;
-  ?>
-
-
-
+										<?php uwmadison_events('http://www.today.wisc.edu/events/feed/30', array('limit' => 2)) ?>
 
                                              </div>
                             <div class="topShade"></div>
