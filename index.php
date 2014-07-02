@@ -618,6 +618,7 @@ if($catslug != "Uncategorized") {
             <?php
   $category = get_the_category();
   $catslug = $category[0]->cat_name;
+  //echo $catslug;
   if($catslug == "Newsmakers") {
     //echo $catslug;
     $academic_info = get_post_meta($post->ID, 'academic_info', true);
@@ -625,6 +626,11 @@ if($catslug != "Uncategorized") {
           echo $academic_info;
     }
 
+  } else if($catslug == "CALS in the Media") {
+      $media_venue = get_post_meta($post->ID, 'media_venue', true);
+          if($media_venue!=""){
+            echo $media_venue;
+      }
   }
 
   ?>
@@ -655,7 +661,7 @@ if($catslug != "Uncategorized") {
             <?php
   $category = get_the_category();
   $catslug = $category[0]->cat_name;
-  if($catslug == "Newsmakers") {
+  if($catslug == "Newsmakers" || $catslug == "CALS in the Media") {
     //echo $catslug;
 
 
