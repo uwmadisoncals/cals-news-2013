@@ -74,7 +74,7 @@ footer, header, hgroup, menu, nav, section {
 	display: none;
 }
 
-body.Mozilla .timer {
+body .timer {
 	opacity: 0;
 }
 
@@ -5471,7 +5471,7 @@ background-size: 100% auto;
 }
 
 .home .collegeFeature .timer {
-	display: block;
+	display: none;
 	position: absolute;
 	bottom: 190px;
 	right: 10px;
