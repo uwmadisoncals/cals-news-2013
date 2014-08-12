@@ -666,12 +666,14 @@ function linkifyYouTubeURLs($text) {
         (?:[0-9A-Z-]+\.)? # Optional subdomain.
         (?:               # Group host alternatives.
           youtu\.be/      # Either youtu.be,
-        | youtube\.com    # or youtube.com followed by
+        | youtube         # or youtube.com or
+          (?:-nocookie)?  # youtube-nocookie.com
+          \.com           # followed by
           \S*             # Allow anything up to VIDEO_ID,
-          [^\w\-\s]       # but char before ID is non-ID char.
+          [^\w\s-]       # but char before ID is non-ID char.
         )                 # End host alternatives.
-        ([\w\-]{11})      # $1: VIDEO_ID is exactly 11 chars.
-        (?=[^\w\-]|$)     # Assert next char is non-ID or EOS.
+        ([\w-]{11})      # $1: VIDEO_ID is exactly 11 chars.
+        (?=[^\w-]|$)     # Assert next char is non-ID or EOS.
         (?!               # Assert URL is not pre-linked.
           [?=&+%\w.-]*    # Allow URL (query) remainder.
           (?:             # Group pre-linked alternatives.
@@ -681,7 +683,7 @@ function linkifyYouTubeURLs($text) {
         )                 # End negative lookahead assertion.
         [?=&+%\w.-]*        # Consume any URL (query) remainder.
         ~ix', 
-        '$1',
+        '<div id="youtubeid" style="display: none;">$1</div>',
         $text);
     return $text;
 }

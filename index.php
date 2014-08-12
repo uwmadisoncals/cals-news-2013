@@ -221,16 +221,31 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
 
 		    				$url = get_the_content();
+		    				//echo $url;
+		    				$intro = linkifyYouTubeURLs($url);
+		    				echo "<div style='display:none;' id='tempContent'>";
+		    				echo $intro;
+		    				echo "</div>";
 
-		    				//$url = linkifyYouTubeURLs($content);
+$regex = '#\<div id="youtubeid"\>(.+?)\<\/div\>#s';
+preg_match($regex, $intro, $matches);
+$match = $matches[0];
+echo '<img id="youtubeImg"';
+//echo "http://img.youtube.com/vi/";
+//echo $match;
+//echo "/0.jpg";
+echo ' alt="" />';
+
 		    				//echo $url;
 							//$url = "http://www.youtube.com/watch?v=C4kxS1ksqtw&feature=relate";
-  parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
-  $videoimg = "http://img.youtube.com/vi/".$my_array_of_vars['v']."/0.jpg";
-							 echo '<img src="';
-							 echo $videoimg;
+  //parse_str( parse_url( $url, PHP_URL_QUERY ), $my_array_of_vars );
+  //print_r($my_array_of_vars);
+  //$videoimg = "http://img.youtube.com/vi/".$my_array_of_vars['v']."/0.jpg";
+							 //echo '<img src="';
+	//						 echo $videoimg;
+
 							 //echo catch_that_image();
-							echo '" alt="" />';
+							//echo '" alt="" />';
 
 						} ?>
 			<div class="boxContent">

@@ -36,6 +36,14 @@ setTimeout(function() {
 	imageBoxFit();
 },1000);
 
+var youtubeContainer = $(".home .videos #youtubeid").text();
+  
+if(youtubeContainer) {
+	var imgSrc = "http://img.youtube.com/vi/" + youtubeContainer + "/0.jpg";
+	$("#youtubeImg").attr("src",imgSrc);
+	$('#tempContent').remove();
+}
+ 
 var sidebarnav = $("#nav_sidebar .pagenav:first-child").html();
 if(sidebarnav == "") {
 	$("#nav_sidebar").hide();
