@@ -4082,6 +4082,8 @@ h1.logo {
   color: #343434;
   overflow: hidden;
   box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
@@ -4102,11 +4104,13 @@ min-height: 220px;
   padding: 30px;
   color: #343434;
    box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
  -moz-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
   -webkit-box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
   float: left;
-  width: 637px;
+
   margin-right: -20px;
 }
 
