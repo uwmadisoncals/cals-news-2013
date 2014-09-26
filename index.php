@@ -136,15 +136,15 @@ echo '<li><a href="#" data-cat="'.$cat->slug.'" class="selected categor">'.$cat-
 
 			<!-- CALS News Content Box -->
 				<div class="row clearfix">
-
-					<div class="span-50 box dropin">
+<?php query_posts("posts_per_page=1&cat=11"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+					<div class="span-50 box dropin" data-imagealign="<?php the_field('image_align'); ?>">
 
 							<h2>Highlights</h2>
 
 							<?php //switch_to_blog(19); ?>
-<?php query_posts("posts_per_page=1&cat=11"); ?>
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post();  ?>
+
 
   <?php	if ( has_post_thumbnail() ) {
 
