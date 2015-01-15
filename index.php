@@ -434,7 +434,7 @@ echo ' alt="" />';
 <?php endif; ?>
 <?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?>
-<a href="<?php get_site_url(); ?>/podcals/" class="moreButton">More Podcals</a>
+<a href="<?php get_site_url(); ?>/podcast/" class="moreButton">More Podcals</a>
 
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
