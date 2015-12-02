@@ -400,8 +400,7 @@ echo ' alt="" />';
 							<h2>Podcals</h2>
 
 							<?php switch_to_blog(20); ?>
-							
-<?php query_posts('cat=14&posts_per_page=1'); ?>
+<?php query_posts('post_type=podcast&posts_per_page=1'); ?>
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post();  ?>
 
@@ -435,7 +434,7 @@ echo ' alt="" />';
 <?php endif; ?>
 <?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?>
-<a href="<?php get_site_url(); ?>/category/podcals/" class="moreButton">More Podcals</a>
+<a href="<?php get_site_url(); ?>/podcast/" class="moreButton">More Podcals</a>
 
 <div class="windows8">
 							<div class="wBall" id="wBall_1">
@@ -468,7 +467,7 @@ echo ' alt="" />';
 			<div id="container" style="opacity: 0;" class="super-list variable-sizes clearfix">
 
 
-<?php	if ( is_home() ) { query_posts( 'showposts=1&offset=3&cat=7' ); } ?>
+<?php	if ( is_home() ) { query_posts( 'showposts=3&offset=3&cat=7' ); } ?>
 
 			<?php if ( have_posts() ) : ?>
 
@@ -574,115 +573,6 @@ echo $category[0]->slug; ?>">
 			<?php endif; ?>
 
 <?php wp_reset_query(); ?>
-
-
-<?php	if ( is_home() ) { query_posts( 'showposts=2&offset=1&cat=11' ); } ?>
-
-			<?php if ( have_posts() ) : ?>
-
-				<?php //twentyeleven_content_nav( 'nav-above' ); ?>
-
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-
-
-
-
-
-
-	<div class="newsItem <?php $category = get_the_category();
-echo $category[0]->slug; ?>">
-
-    		<div class="previousa">
-    		<div class="additionalContent">
-
-
-
-    				<?php
-
-	    				if ( has_post_thumbnail() ) {
-
-		    				//the_post_thumbnail();
-		    				echo get_the_post_thumbnail($page->ID, 'large');
-
-		    				} else {
-
-							 //echo '<img src="';
-							 echo catch_that_image();
-							// echo '" alt="" />';
-
-						}
-
-    				?>
-
-
-    		</div>
-
-    		<div class="text">
-    			<div class="glyph"><div class="symbol"></div></div>
-    			<div class="titleheading">
-
-    			<h3><?php the_title(); ?></h3>
-    			</div>
-    			<div class="excerpt">
-
-
-			<?php the_content_rss('', FALSE, '', 180); ?>
-
-
-    			</div>
-    			<div class="dateheading">
-    			<?php the_time('l, F jS, Y'); ?>
-    			</div>
-    			<div class="hiddendate"><?php echo "-"; the_time('Ymd') ?></div>
-    			<div class="hiddengroup"><?php $category = get_the_category();
-
-
-          echo $category[0]->slug; ?></div>
-
-
-					<span class="number">10</span>
-    		</div>
-
-    		<a href="<?php the_permalink(); ?>" class="highlight"><?php the_title(); ?></a>
-    		<div class="windows8">
-							<div class="wBall" id="wBall_1">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_2">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_3">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_4">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_5">
-							<div class="wInnerBall">
-							</div>
-							</div>
-						</div>
-
-						<div class="shade"></div>
-    	</div>
-
-    </div>
-
-				<?php endwhile; ?>
-
-				<?php else : ?>
-
-
-
-			<?php endif; ?>
-
-<?php wp_reset_query(); ?>
-
 
 			<!-- Main posts excluding CALS Faces, Podcals, Highlights -->
    		<?php	if ( is_home() ) { query_posts( 'showposts=5&offset=0&cat=-14,-17,-21,-25,-26,-27,-11,-7,-8' ); } ?>

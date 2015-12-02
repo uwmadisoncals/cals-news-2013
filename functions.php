@@ -38,6 +38,15 @@
  */
 
 
+function patch_ssp_player_url( $link, $episode_id, $file ){
+
+  if( preg_match('/\?ref=player/', $link) ){
+    $link = str_replace('?ref=player', '', $link);
+  }
+
+  return $link;
+}
+add_filter('ssp_episode_download_link', 'patch_ssp_player_url', 10, 3);
 
 
 
