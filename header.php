@@ -49,6 +49,14 @@
 <meta name="viewport" content="width=320.1, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
 <meta name="apple-mobile-web-app-capable" content="no">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+<?php while ( have_posts() ) : the_post(); ?>
+<meta property="og:description" content="<?php the_excerpt_rss(); ?>" />
+<meta property="og:image" content="<?php if ( has_post_thumbnail() ) { the_post_thumbnail_url(); } else { echo catch_that_news_image_facebook(); } ?>" />
+<?php endwhile; // end of the loop. ?>
+
+
  <!-- iOS Device Startup Images -->
  
 <!-- iPhone -->
@@ -160,11 +168,7 @@ $current_colorscheme = $options['link_color'];
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
 <a href="#" class="mobileNavTrigger" aria-hidden="true">Navigation</a>
 
-<div class="ieWarning" style="display: none;">
-	<h1>It appears you have adjusted your browser to force compatibility mode.  You will have a less than optimal experience when viewing this site as it was designed with modern web standards in mind.</h1>
-	<p>To allow this site to behave normally, turn this off by pressing <strong>alt</strong> then click <strong>Tools</strong> and then <strong>Compatibility View Settings</strong>.  If you uncheck <strong>Display all websites in compatibility view</strong> your browser will be restored to its default behavior for compatibility mode.</p>
-	<a href="#" class="button ieWarningDismissOnce">Dismiss</a> or <a href="#" class="button ieWarningDismiss">Dismiss and don't bother me again</a>
-</div>
+
 <div id="page" class="hfeed">
 	<header id="branding" role="banner">
 		<div class="headerCentered">
