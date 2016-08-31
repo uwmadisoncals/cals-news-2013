@@ -52,6 +52,7 @@ University of Wisconsin Foundation.</p>
 			<a href="http://www.linkedin.com/groups?gid=5062996" class="linkedin">LinkedIn</a>
 			<a href="http://www.youtube.com/user/UWMadisonCALS" title="Our latest videos" class="youtube">Youtube</a>
 			<a href="https://www.facebook.com/UWMadisonCALS" title="Like us on Facebook" class="facebook">Facebook</a>
+			<a href="https://www.instagram.com/uwmadisoncals/" title="Follow us on Instagram" class="instagram">Instagram</a>
 		</div>
 			<div class="clearfix"></div>
         </div>
